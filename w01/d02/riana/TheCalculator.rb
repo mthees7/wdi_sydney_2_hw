@@ -74,7 +74,7 @@ def get_values(basic_operation)
   calc_value = 0
 
   print "Enter a value for the calculation: "
-  calc_value = gets.chomp.to_f
+  calc_value = gets.chomp.to_i
 
   #keep asking for values until the user chooses to stop
   while !done
@@ -85,7 +85,7 @@ def get_values(basic_operation)
     if continue == 'y'
       total = calc_value
       print "Enter a value to be calculated: "
-      calc_value = gets.chomp.to_f
+      calc_value = gets.chomp.to_i
       #when the user elects to stop adding values pass the array to a method that handles the calc based on the operation
     elsif continue == 'n'
       case basic_operation
