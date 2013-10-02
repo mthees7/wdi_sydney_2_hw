@@ -1,0 +1,11 @@
+def power(n**n)
+  n ** n
+end
+
+puts "What is the number?"
+            first = gets.chomp.to_f
+          puts "to the power of?"
+            power = gets.chomp.to_f
+
+power = (first**power)
+puts power
