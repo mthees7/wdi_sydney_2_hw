@@ -1,4 +1,6 @@
-# Leap
+# Warm up excercise 
+
+## Leap year
 
 Write a program that will take a year and report if it is a leap year. The tricky thing here is that a leap year occurs:
 
@@ -14,6 +16,11 @@ For example, 1997 is not a leap year, but 1996 is.
 Your program should be called as follows:
 
 ```ruby
+year = Year.new(1996)
+year.leap?
+
+or
+
 Year.new(1996).leap?
 ```
 
