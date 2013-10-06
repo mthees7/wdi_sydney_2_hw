@@ -34,8 +34,6 @@ they can see the history
   - Using `animal-prompt.rb` as a starting point
     - have class discuss what should happen in each method
     - leave `animal-prompt.rb` on board while students begin working on their own
-  - This specification has been written with TDD in mind.  Use this
-  specification to (re)introduce TDD.
 
 ###Specification:
 #####Object Specs:
