@@ -26,7 +26,6 @@ Write Bob so that you can have an interactive conversation with him.
 
 create a class Bob and add a method named chat
 
-```
 here is how we can use it:
 
 ```
