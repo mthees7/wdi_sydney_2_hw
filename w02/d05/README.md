@@ -1,8 +1,8 @@
 # Homework
 
-Movies 2 (link)[https://gist.github.com/wofockham/d0008977148b7ef6f92f]
-MTA in Sinatra
-Ruby Koans
+* Movies 2 https://gist.github.com/wofockham/d0008977148b7ef6f92f
+* MTA in Sinatra
+* Ruby Koans
 
 Bonus: Redo a Sinatra app with Camping.io
 
