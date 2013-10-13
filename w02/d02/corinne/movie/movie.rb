@@ -1,3 +1,10 @@
+# a more robust solution for removing spaces from your URL is to use URI encoding which will also fix other troublesome characters like ? and /
+# require 'open-uri'
+# url = URI::encode url
+# URI::encode 'Oh Brother! Where Art Thou?'
+# "Oh%20Brother!%20Where%20Art%20Thou?"
+
+
 require 'sinatra'
 require 'sinatra/reloader'
 require 'httparty'
@@ -28,4 +35,26 @@ get '/' do
     #below: access to form.erb
   erb :form
 end
+
+
+
+# Nick's code!!!!-------
+# get '/' do
+#   erb:form
+# end
+
+# get '/movies' do
+#   @title = params[:movie_name]
+#   url = "http://www.omdbapi.com/?i=&t=#{@title}"
+
+#   @movie = HTTParty.get url
+#   @movie_info = JSON @movie
+#   erb:movies
+# end
+
+
+
+
+
+
 
