@@ -1,0 +1,17 @@
+<form method="get" action= "/">
+  <input name="title" placeholder="Enter Movie Name">
+
+  <input type="submit" value="Find movie info">
+</form>
+
+  <% if @movie %>
+  <h2><% @movie%> </h2>
+
+    <img src="<%=@movie_info["Poster"]%>">
+    <p>Year: <%= @movie_info["Year"] %></p>
+    <p>Rated: <%= @movie_info["Rated"] %></p>
+    <p>Plot: <%= @movie_info["Plot"] %> </p>
+    <p>Cast: <%= @movie_info["Actors"] %></p>
+
+  <% end %>
+
