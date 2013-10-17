@@ -16,31 +16,40 @@ ActiveRecord::Base.establish_connection(
 
 class Post <ActiveRecord::Base
   attr_accessible :title, :body
-
+  has_many :comments
   def body
     attributes['body'].gsub("\n", "<br>")
   end
-
 end
 
+class Comment < ActiveRecord::Base
+  attr_accessible :name, :comment
+  belongs_to :post
+end
 
+# get '/pry' do
+#   binding.pry
+# end
+
+
+# ------ Main ------
 
 get '/' do
   @posts = Post.all
   erb :posts
 end
 
-
-get '/posts/new' do
-  erb :new
-end
-
-
 get '/posts' do
   @posts = Post.all
   erb :posts
 end
 
+
+# ------ Post New ------
+
+get '/posts/new' do
+  erb :new
+end
 
 post '/create' do
   post = Post.new
@@ -49,6 +58,26 @@ post '/create' do
   post.save
   redirect to '/'
 end
+
+
+# ------ Comment New ------
+
+get '/posts/:id/comments/new' do
+  erb :comment_new
+end
+
+post '/posts/:id/comments/create' do
+  comment = Comment.new
+  comment.name = params[:name]
+  comment.comment = params[:comment]
+  post = Post.find params[:id]
+  post.comments << comment
+  redirect to "/posts/#{params['id']}"
+end
+
+
+
+# ------ Post Edit ------
 
 
 get '/posts/:id/edit/' do
@@ -66,18 +95,48 @@ post '/posts/:id' do
 end
 
 
+# ------ Comment Edit ------
+
+get '/posts/:id/comments/:comment_id/edit/' do
+  @comment = Comment.find(params[:comment_id])
+  erb :comment_new
+end
+
+
+post '/posts/:id/comments/:comment_id/update/' do
+  comment = Comment.find(params[:comment_id])
+  comment.title = params[:title]
+  comment.body = params[:body]
+  comment.save
+  redirect to "/posts/#{params['id']}"
+end
+
+
+
+# ------ Post Delete ------
+
 post '/posts/:id/delete' do
   Post.destroy(params[:id])
   redirect to '/'
 end
 
 
+# ------ Comment Delete ------
+
+post '/posts/:id/comments/:comment_id/delete' do
+  Comment.destroy(params[:comment_id])
+  redirect to "/posts/#{params['id']}"
+end
+
+
+# ------ Other ------
+
 get '/posts/:id' do
   @posts = Post.where(:id => params[:id])
   if @posts.nil?
     redirect to '/'
   end
-  erb :posts
+  erb :single_post
 end
 
 

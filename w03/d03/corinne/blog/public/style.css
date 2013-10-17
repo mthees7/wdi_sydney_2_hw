@@ -4,7 +4,7 @@
 body {
   background-color: black;
   font-family: 'Bitter', serif;
-
+  background-repeat: no-repeat;
 }
 
 a:hover {
@@ -16,6 +16,7 @@ a:hover {
 {
   padding: 0px;
   margin: 0px;
+
 }
 
 
@@ -75,7 +76,9 @@ section
   color: rgba(255, 160, 0, .9);
   display: block;
   letter-spacing: .6px;
-  margin-top: 20px
+  margin-top: 20px;
+  background-color: black;
+  padding: 5px;
 
 }
 
@@ -129,6 +132,11 @@ footer {
   margin-top: 0;
 }
 
+.main_add_comment a{
+  margin-right: 5px;
+
+}
+
 /*--------------------------------
               NEW PAGE
 --------------------------------*/
@@ -157,8 +165,8 @@ textarea {
   background-color: rgba(255, 160, 0, .7);
   margin: auto;
   display: block;
-  height: 300px;
-  width: 690px;
+  height: 200px;
+  width: 600px;
   border: 1px solid black;
   padding: 10px;
   font-size: 1.1em;
@@ -183,12 +191,29 @@ textarea {
 
 
 
+/*--------------------------------
+              COMMENT
+--------------------------------*/
 
 
 
+.comment {
+  border: 1px solid rgba(255, 160, 0, .9);
+  margin: 0 15px -20px 15px;
+  padding: 10px;
+}
 
+.name {
+ margin-top: 90px;
+ margin-bottom: 5px;
+}
 
-
+.link p a {
+  margin-top: -70px;
+  font-size: 1.2em;
+  width: 170px;
+  text-align: center;
+}
 
 
 
