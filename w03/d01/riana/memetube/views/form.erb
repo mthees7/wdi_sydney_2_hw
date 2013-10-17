@@ -1,0 +1,26 @@
+<h2>Enter your new video details</h2>
+<form method="post" action="/videos/create">
+  <div class="title">
+    <label for="video_name">Title</label>
+    <input title="video_name" placeholder="Video title" name="video_name">
+  </div>
+
+  <div class="url">
+    <label for="url">URL</label>
+    <textarea name="url">Video URL</textarea>
+  </div>
+
+  <div class="genre">
+    <label for="genre">Genre</label>
+    <select name="genre">
+      <option value="genre1">Animation</option>
+      <option value="genre2">Comedy</option>
+      <option value="genre3">Drama</option>
+      <option value="genre4">Reality &amp; Game Shows</option>
+      <option value="genre5">Documentary</option>
+      <option selected>Genre Options</option>
+    </select>
+  </div>
+
+  <input class="button createVideo" type="submit" value="Create">
+</form>

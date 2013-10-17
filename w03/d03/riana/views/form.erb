@@ -1,0 +1,25 @@
+<h2>Add a new post for your blog</h2>
+<!-- check whether the instance variable is nil that means it's a new blog post -->
+<!-- check whether the instance variable contains an it then prepopulate the form -->
+<form method="POST" action='<%= @post.nil? ? "/post/new" : "/post/#{@post['id']}" %>' >
+  <label class="formLabel" for="title">Title</label>
+  <!-- Prepopulate the value for update action -->
+  <input class="formInput" type='text' name="title" placeholder="Post Title" value='<%= @post['title'] if @post %>'  autofocus>
+  <br/>
+  <label class="formLabel" for="category">Post Type</label>
+  <select class="formInput" name="category" id="category">
+    <option value="programming">Programming</option>
+    <option value="photography">Photography</option>
+    <option value="food">Food</option>
+    <option value="adventures">Adventures</option>
+  </select>
+  <br/>
+  <label class="formLabel" for="image">Image for the post</label>
+  <input class="formInput" name="image" placeholder="Post Image" value='<%= @post['image'] if @post %>'>
+  <br/>
+  <label class="formLabel" for="body"></label>
+  <textarea class="formInput" name="body" cols="2"><%= @post['body'] if @post %></textarea>
+  <br/>
+  <label class="formLabel" for="save">Save your new post</label>
+  <button class="button formInput"><%= @post.nil? ? "Save Blog Post" : "Edit Blog Post" %></button>
+</form>

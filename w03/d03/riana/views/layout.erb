@@ -1,0 +1,23 @@
+<!doctype html>
+<html>
+  <head>
+    <link rel="stylesheet" href="/style.css"></link>
+    <link href='http://fonts.googleapis.com/css?family=Griffy' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Josefin+Sans' rel='stylesheet' type='text/css'>
+    <title>My Fuzzy Blog</title>
+  </head>
+  <body>
+    <h1>My Fuzzy Blog</h1>
+
+    <nav class="menu">
+      <ul>
+        <li><a class="button" href="/" alt="List of most recent posts">Home</a></li>
+        <li><a class="button" href="/post/archive" alt="All historical posts">Archive</a></li>
+        <li><a class="button" href="/post/new" alt="Add a new post">New Post</a></li>
+      </ul>
+    </nav>
+    <div class="container">
+      <%= yield %>
+    </div>
+  </body>
+</html>

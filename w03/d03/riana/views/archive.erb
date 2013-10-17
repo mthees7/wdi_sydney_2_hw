@@ -1,0 +1,12 @@
+<!-- list of all historical posts -->
+<h2>Blog post archive</h2>
+<section class="post_list">
+  <% @all_posts.each do |post| %>
+    <p>
+      <a href='/post/<%= post['id'] %>'><%= post['title'] %></a>
+      <span><%= post['category'] %></span>
+      <span><%= post['body'].slice(0,20) %></span>
+      <span><%= post['created_at']%></span>
+    </p>
+  <% end %>
+</section>

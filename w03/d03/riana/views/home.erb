@@ -1,0 +1,41 @@
+<section class="last_post">
+  <h2><%= @current_post.title %> - <%= @current_post.category%></h2>
+  <p><%= @current_post.created_at %></p>
+  <p><%= @current_post.body %></p>
+  <p><%= @current_post.image %></p>
+  <a class="button" href="/post/<%= @current_post.id %>/edit">Edit Post</a>
+  <a class="button remove" href="/post/<%= @current_post.id %>/delete">Delete Post</a>
+</section>
+
+<!-- disgus service that manages user comments on a website -->
+<section class="feedback">
+  <div id="disqus_thread"></div>
+    <script type="text/javascript">
+        /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+        var disqus_shortname = 'fuzzyblog'; // required: replace example with your forum shortname
+
+        /* * * DON'T EDIT BELOW THIS LINE * * */
+        (function() {
+            var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+            dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+        })();
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+</section>
+
+<aside class="recent_posts">
+  <h2>The last 5 blog posts</h2>
+  <div class="post_list">
+    <% @latest_posts.each do |post| %>
+      <p>
+        <a href='/post/<%= post['id'] %>'><%= post['title'] %>
+          <span><%= post['category'] %></span>
+          <span><%= post['body'].slice(0,20) %></span>
+          <span><%= post['created_at']%></span>
+        </a>
+    </p>
+    <% end %>
+  </div>
+</aside>
