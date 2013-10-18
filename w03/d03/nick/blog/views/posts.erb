@@ -1,0 +1,22 @@
+<% @posts.each do |post| %>
+
+    <h2 class="title"><a href='/posts/<%= post['id'] %>'><%= post['title'] %></a></h2>
+
+
+    <img src='<%= post['image'] %>' class="blog_image"/>
+    <p><%= post['body'] %></p>
+
+    <div class="info">
+    <ul>
+      <li><p2>Posted in: <%= post['category'] %><p2></li>
+      <li><p2>Posted at: <%= post['created_at'] %></p2></li>
+    <ul>
+    </div>
+
+     <div class="edit">
+      <form action='/<%= post.id %>/delete' method='post'><button>Delete</button>
+       </form>
+        <a href='/<%= post['id'] %>/edit/'><button>Edit</button></a>
+    </div>
+<% end %>
+

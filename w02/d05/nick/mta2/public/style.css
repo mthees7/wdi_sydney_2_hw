@@ -1,0 +1,72 @@
+#container {
+     max-width: 940px;
+     margin: 0 auto;
+     position: relative;
+}
+
+body {
+     background: black;
+     font-family: Helvetica;
+     font-size: 13px;
+     line-height: 19px;
+     color: white;
+}
+
+h1   {
+     margin: 0 auto;
+     width: 175px;
+     height: 191px;
+     }
+
+h1.phark {
+     width: 175x;
+     margin-top: 20px;
+     margin-bottom: 20px;
+     height: 191px;
+     background: url('/mta_nyc_logo_white.png');
+     text-indent: -9999px;
+}
+
+p   {
+    font-family: Helvetica;
+    line-height: 19px;
+    color: white;
+    text-align: center;
+    font-size: large;
+    }
+
+form {
+     text-align: center;
+     font-size: large;
+}
+
+input {
+  border-bottom: 2px solid;
+}
+
+footer {
+   text-align: center;
+   padding: 10px;
+   width: 940px;
+   margin: 0 auto;
+   display: block;
+   margin-top: 20px;
+   margin-bottom: 20px;
+}
+
+ul {
+  padding-top: 20px;
+
+}
+
+li {
+  list-style: none;
+  text-align: center;
+  font-size: 80px;
+  line-height: 80px;
+}
+
+.lines {
+  margin: 0px auto;
+  text-align: center;
+}
