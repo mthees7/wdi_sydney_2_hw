@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang='en'>
+<head>
+  <meta charset='utf-8'>
+  <title>Matts Blog</title>
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+  <div class='nav'>
+    <nav>
+      <ul>
+        <li><a class='button' href='/'>Home</a></li>
+        <li><a class='button' href='/post/new'>+ New Post</a></li>
+        <li><a class='button' href='/post/new'>About Me</a></li>
+        <li><a class='button' href='/post/new'>Other Blogs</a></li>
+        <li><a class='button' href='/random'>Random</a></li>
+      </ul>
+    </nav>
+    <br />
+  </div>
+  <div class='container'>
+    <%= yield %>
+  </div>
+</body>
+<footer>
+
+</footer>
+</html>

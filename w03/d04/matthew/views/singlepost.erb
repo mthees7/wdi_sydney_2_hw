@@ -1,0 +1,30 @@
+
+  <div class='main'>
+
+      <h2><%= @post['title']%></h2>
+      <p><%=@post.body%></p>
+      <p class="center"> Posted by: <span class="myname"><b>Matthew Thees  //</b></span> <%= @post['created_at'] %> //</p>
+
+      <form action='/post/<%= @post['id'] %>/edit/'><button>Edit</button></form>
+      <form action="/post/<%= @post['id'] %>/delete" method='post'><button>Delete</button></form>
+
+  </div>
+</div>
+
+<div class='container'>
+  <div class='main'>
+
+    <form action='/addcomment' method='post'>
+      <input name="person" maxlength='50' placeholder="Name"></p>
+      <textarea name="comment" placeholder="Comment.."></textarea>
+      <input type="hidden" name="post_id" value="<%= @post['id'] %>">
+    <p class="guy"><input type="submit" value="Post Comment"></p></form>
+
+    <% @post.comments.each do |comment| %>
+    <div class='main'>
+      <h2><%=comment.person%></h2>
+      <p><%=comment.comment%></p>
+    </div>
+    <%end%>
+
+  </div>
