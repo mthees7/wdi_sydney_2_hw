@@ -1,0 +1,77 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the top of the
+ * compiled file, but it's generally better to create a new file per style scope.
+ *
+ *= require_self
+ *= require_tree .
+ */
+
+body {
+  margin: 0 0;
+  background-color: #E0F8F7;
+}
+
+img {
+  max-width: 300px;
+  max-height: 250px;
+}
+
+ul {
+  list-style: none;
+}
+
+h2 {
+  font-family: 'Share Tech', sans-serif;
+}
+
+h2.home {
+  margin-left: 30px;
+}
+
+nav {
+  font-family: 'Gudea', sans-serif;
+  font-size: 30px;
+  background-color: #81BEF7;
+  line-height: 50px;
+}
+
+a {
+  font-family: 'Gudea', sans-serif;
+  text-decoration: none;
+  color: black;
+}
+
+nav a {
+  padding-right: 10px;
+  border-right: solid black;
+  padding-left: 10px;
+}
+
+nav.footer {
+  margin-top: 70px;
+  font-size: 20px;
+  margin-bottom: 50px
+}
+
+div.mountain li {
+  display: inline-block;
+}
+
+div.mountain {
+  max-width: 650px;
+  background-color: #81BEF7;
+  margin-bottom: 30px;
+}
+
+b {
+  font-weight: 200%;
+  text-decoration: underline;
+}
+
+

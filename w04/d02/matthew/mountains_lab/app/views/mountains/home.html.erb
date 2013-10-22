@@ -1,0 +1,12 @@
+
+<h2 class='home'>Mountains</h2>
+  <ul>
+    <% @mountains.each do |mountain| %>
+      <div class='mountain'>
+        <li><img src="<%= mountain.image %>"></li>
+        <li><a href="/mountain/<%=mountain.id%>"><b><%= mountain.name %></b></a></li>
+        <li> Height: <%=mountain.height %> </li>
+        <li> Location: <%=mountain.location %> </li>
+      </div>
+  <% end %>
+  </ul>

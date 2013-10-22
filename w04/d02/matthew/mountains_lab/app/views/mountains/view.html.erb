@@ -1,0 +1,8 @@
+<h2> Specific View of one Mountain </h2>
+
+<h3> <%= @mountain.name%> <h3>
+
+<img src="<%= @mountain.image %>">
+
+ <p><%= link_to 'Edit Mountain', mountain_edit_path(@mountain.id) %></p>
+ <p><%= button_to 'Delete Mountain', mountain_delete_path(@mountain.id) %></p>
