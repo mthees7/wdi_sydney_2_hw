@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang='en'>
+  <head>
+    <meta charset='utf-8'>
+    <title>Nobody ever looks at this</title>
+    <link rel="stylesheet" href="/style.css">
+  </head>
+
+  <body>
+    <div id="container">
+      <header>
+        <h1 class="phark">Inside Web Development Immersive Sydney</h1>
+        <nav>
+          <ul>
+          <li><a href='/'>Home</a></li>
+          <li><a href='/new'>Make New Post</a></li>
+          </ul>
+        </nav>
+      </header>
+
+      <div class="main">
+        <%= yield %>
+      </div>
+
+      <div class="sidebar">
+        <ul>
+          <h3>CATEGORIES</h3>
+          <% @categories.each do |post| %>
+          <li><a href='/<%= post['category'] %>'><%= post['category'] %></a></li>
+          <% end %>
+        </ul>
+      </div>
+
+    </div>
+  </body>
+</html>
