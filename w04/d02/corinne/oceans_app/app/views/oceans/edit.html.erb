@@ -1,0 +1,13 @@
+<h1>Edit Ocean</h1>
+
+<form method="post" action=<%= oceans_update_path(@ocean.id) %>>
+  <label>Ocean's Name:</label><input type="text" name="ocean[name]" value="<%= @ocean.name %>" autofocus>
+  <label>Area in square meters:</label><input type="text" name="ocean[area]" value="<%= @ocean.area %>">
+  <label>Average Depth in meters:</label><input type="text" name="ocean[avg_depth]" value="<%= @ocean.avg_depth %>">
+  <label>Greatest Depth in meters:</label><input type="text" name="ocean[max_depth]" value="<%= @ocean.max_depth %>">
+  <label>Deepest Place:</label><input type="text" name="ocean[deepest_place]" value="<%= @ocean.deepest_place %>">
+  <label>Image URL:</label><input type="text" name="ocean[image]" value="<%= @ocean.image %>">
+
+  <div class="button"><button>Edit Ocean</button></div>
+</form>
+

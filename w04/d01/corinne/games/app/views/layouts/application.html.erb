@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Games</title>
+  <%= stylesheet_link_tag    "application", :media => "all" %>
+  <%= javascript_include_tag "application" %>
+  <%= csrf_meta_tags %>
+  <link href='http://fonts.googleapis.com/css?family=Fascinate+Inline' rel='stylesheet' type='text/css'>
+</head>
+<body>
+  <nav>
+    <ul>
+      <li><%= link_to 'Home', root_path %> </li>
+      <li><%= link_to 'Magic 8 Ball', magic_8_ball_path %> </li>
+      <li><%= link_to 'Secret Number', secret_number_path %> </li>
+      <li><%= link_to 'Rock, Paper, Scissors', rock_paper_scissors_path %> </li>
+    </ul>
+  </nav>
+  <div class='container'>
+    <%= yield %>
+  </div>
+</body>
+</html>
