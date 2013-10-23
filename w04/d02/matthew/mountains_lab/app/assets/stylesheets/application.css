@@ -56,17 +56,18 @@ nav a {
 nav.footer {
   margin-top: 70px;
   font-size: 20px;
-  margin-bottom: 50px
+  margin-bottom: 50px;
 }
 
-div.mountain li {
-  display: inline-block;
+div.picture {
+  display: inline;
 }
 
 div.mountain {
   max-width: 650px;
   background-color: #81BEF7;
   margin-bottom: 30px;
+  margin-left: 30px;
 }
 
 b {
