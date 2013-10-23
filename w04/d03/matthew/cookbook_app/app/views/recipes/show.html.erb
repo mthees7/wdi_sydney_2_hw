@@ -1,0 +1,18 @@
+<h2> <%= @recipe.name %> </h2>
+
+<p> <b>Course:</b> <%= @recipe.course %> </p>
+<p> <b>Minutes to Prepare:</b> <%= @recipe.cooktime %> </p>
+
+
+<%= image_tag @recipe.image %><br>
+
+<%= link_to 'Edit Recipe', edit_recipe_path(@recipe) %>
+<%= button_to 'Delete Recipe', @recipe, :method => 'delete' %>
+
+<p> <%= @recipe.instructions %> </p>
+<h3> Ingredients </h3>
+
+  <% @recipe.ingredients.each do |ingredient| %>
+    <%= ingredient.name %>
+    <%= image_tag ingredient.image, :class => 'ingredient' %>
+  <%end%>

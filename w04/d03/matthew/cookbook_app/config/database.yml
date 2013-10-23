@@ -1,0 +1,19 @@
+
+development:
+  adapter: postgresql
+  encoding: unicode
+  database: cookbook_app_development
+  pool: 5
+  host: localhost
+  username: matthewthees
+  password:
+
+
+
+# production:
+#   adapter: postgresql
+#   encoding: unicode
+#   database: cookbook_app_production
+#   pool: 5
+#   username: cookbook_app
+#   password:
