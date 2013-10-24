@@ -1,0 +1,11 @@
+<ol>
+  <% @artworks.each do |artwork| %>
+  <li>
+    <ul>
+      <li><%= link_to artwork.title, artwork_path(artwork) %></li>
+      <li><%= artwork.location %></li>
+      <li><%= image_tag artwork.image %></li>
+    </ul>
+  </li>
+<% end %>
+</ol>
