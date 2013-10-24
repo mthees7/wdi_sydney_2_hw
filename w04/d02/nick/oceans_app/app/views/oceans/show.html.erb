@@ -1,0 +1,6 @@
+<h2><%= @ocean.name %></h2>
+Area: <%= @ocean.area %>
+Ave. Depth: <%= @ocean.mean_depth %>
+
+<%= link_to 'Edit Ocean', ocean_edit_path(@ocean.id) %>
+<%= button_to 'Delete Ocean', ocean_delete_path(@ocean.id) %>
