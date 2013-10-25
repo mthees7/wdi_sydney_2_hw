@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>GalleryApp</title>
+  <%= stylesheet_link_tag    "application", :media => "all" %>
+  <%= javascript_include_tag "application" %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+  <nav>
+    <%= link_to 'Artists', artists_path %>
+    <%= link_to 'Artworks', artworks_path %>
+    <%= link_to 'New Artist', new_artist_path %>
+    <%= link_to 'New Artwork', new_artwork_path %>
+
+  </nav>
+<%= yield %>
+
+</body>
+</html>
