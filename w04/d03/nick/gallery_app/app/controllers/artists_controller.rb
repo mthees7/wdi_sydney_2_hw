@@ -13,7 +13,7 @@ class ArtistsController  < ApplicationController
 
   def create
     artist = Artist.create params[:artist]
-    redirect_to artist_path(artist)
+    redirect_to artists_path
   end
 
   def destroy

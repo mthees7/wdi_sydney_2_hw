@@ -16,5 +16,16 @@
   <%= f.text_field :image %>
 </p>
 
+
+<p>
+    <%= f.label :artist_id %>
+    <select name="artwork[artist_id]">
+    <% Artist.order(:name).each do |artist| %>
+    <option value=<%= artist.id%> <%= 'selected' if artist.id == @artwork.artist_id %>><%=artist.name %></option>
+      <% end %>
+  </p>
+
   <%= f.submit %>
 <% end %>
+
+
