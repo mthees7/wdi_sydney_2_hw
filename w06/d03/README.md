@@ -11,15 +11,13 @@ with building out the logic using JavaScript.
 ###Prerequisites:
 - Functions
 - DOM manipulation
+- [atm-student]
 
 ###Objectives:
 - DOM slection, appending, removal
 
 ###Activity:
 Students will build an application using basuc javascript functions and DOM manipulation
-
-## How to lead the lesson
-Students should be able to construct the ATM application from the spec provided
 
 ###Specification:
 
@@ -41,3 +39,5 @@ balance down to $0 and take the rest of the withdrawal from the savings account.
 If the withdrawal amount is more than the combined account balance, ignore it.
 * Make sure there is overdraft protection going both ways.
 * Are there ways to refactor your code to make it DRYer?
+
+[atm-student]: atm-student
