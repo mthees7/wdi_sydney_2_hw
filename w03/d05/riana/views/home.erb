@@ -1,0 +1,28 @@
+<section class="artist_main">
+  <h2>GA Gallery Artists</h2>
+  <% if !@all_artists.nil? %>
+    <% @all_artists.each do |artist_info| %>
+      <p>
+        <span class="label"><%= artist_info.name %></span>
+        <span class="mod_artists">
+          <a class="button" href="/artist/<%= artist_info.id %>">Edit</a>
+          <a class="button" href="/artist/<%= artist_info.id %>/delete">Delete</a>
+        </span>
+      </p>
+    <% end %>
+  <% end %>
+</section>
+<section class="artwork_main">
+  <h2>GA Gallery Artworks</h2>
+  <% if !@all_artworks.nil? %>
+    <% @all_artworks.each do |artwork_info| %>
+      <p>
+        <span class="label"><%= artwork_info.name %></span>
+        <span class="mod_artworks">
+          <a class="button" href="/artwork/<%= artwork_info.id %>">Edit</a>
+          <a class="button" href="/artwork/<%= artwork_info.id %>/delete">Delete</a>
+        </span>
+      <p>
+    <% end %>
+  <% end %>
+</section>

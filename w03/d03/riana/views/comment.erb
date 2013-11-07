@@ -1,0 +1,8 @@
+<form method="POST" action='<%= @current_comment.nil? ? "/post/#{@post.id}/comment" : "/post/#{@post.id}/comment/#{@current_comment.id}/edit" %>' >
+  <label for="participant">Name</label>
+  <input name="participant" placeholder="participant" value="<%= @current_comment.participant if @current_comment %>">
+  <label for="comment">Comment</label>
+  <textarea name="comment" placeholder="comment"><%= @current_comment.comment if @current_comment %></textarea>
+  <button class="button">Save</button>
+</form>
+

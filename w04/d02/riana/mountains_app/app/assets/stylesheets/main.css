@@ -1,8 +1,10 @@
-/*****************************************************************************/
-/**                               generic layout                            **/
-/*****************************************************************************/
 html{
   height: 100%;
+}
+body{
+  font-family: 'Helvetica';
+  width: 940px;
+  margin: auto;
 }
 .button{
     position: relative;
@@ -47,42 +49,17 @@ html{
     background-image: -o-linear-gradient(#599bdc, #3072b3);
     background-image: linear-gradient(#599bdc, #3072b3);
 }
-
 h1, h2{
-  font-family: 'Griffy', cursive;
-}
-body{
-  width: 940px;
-  height: 100%;
-  margin: 0 auto;
-  font-family: 'Josefin Sans', sans-serif;
-  font-size: 1em;
-  background-color: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#71A590), to(#A56B61), color-stop(1,#333333));
+    font-family: 'Marcellus SC', serif;
+    text-align: center;
 }
 nav{
-  display: inline;
+
+}
+nav ul{
+    display: inline;
+    list-style: none;
 }
 nav ul li{
-  display: inline;
-  list-style: none;
-}
-
-/*home page layout*/
-.last_post{
-  display: inline;
-  width: 70%;
-}
-.last_post h1{
-  display: inline;
-}
-.recent_posts{
-  display: inline;
-  width: 30%;
-}
-/*form layout for add and update*/
-.formLabel{
-
-}
-.formInput{
-
+    text-decoration: none;
 }

@@ -1,0 +1,15 @@
+<form method="POST" action='<%= @artist.nil? ? "/artist/new" : "/artist/#{@artist.id}" %>'>
+  <p>Add New Artist for GA Gallery</p>
+  <label for="name">Artist Name</label>
+  <input name="name" placeholder="name" value="<%= @artist.name if @artist %>">
+  <input class="button" type="submit" value="Save">
+</form>
+
+<section>
+  <h2>GA Gallery Artists</h2>
+  <% if !@all_artists.nil? %>
+    <% @all_artists.each do |an_artist| %>
+        <p><%= an_artist.name %></p>
+    <% end %>
+  <% end %>
+</section>

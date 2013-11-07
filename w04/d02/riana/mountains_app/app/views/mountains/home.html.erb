@@ -1,0 +1,6 @@
+<h1>Mountains</h1>
+<ul>
+  <% @mountains.each do |mountain| %>
+  <li><%= link_to mountain.name, mountain_path(mountain.id) %> in <%= mountain.location %></li>
+  <% end %>
+</ul>

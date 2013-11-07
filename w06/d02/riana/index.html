@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <link href='http://fonts.googleapis.com/css?family=Sancreek' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Cutive+Mono' rel='stylesheet' type='text/css'>
+    <!--link rel="stylesheet" href="main.css"></link-->
+    <script src="js/geometry.js"></script>
+    <title>MTA</title>
+  </head>
+
+  <body>
+    <header>
+      <h1>MTA Route Planner</h1>
+    </header>
+
+    <section class="theRoute">
+      <h2>Plan Your Journey</h2>
+        <p>Start Station</p>
+
+        <!-- display a drop down list of lines -->
+        <form action="/route" method="POST">
+          <select name="start">
+            <!-- loop through the hash of lines and value array of stops -->
+          </select>
+
+        <p>End Station</p>
+        <p>
+          <select name="end">
+            <!-- loop through the hash of lines and value array of stops -->
+          </select>
+        </p>
+
+        <p>
+          <input id="plan_btn" type="submit" value="Plan Route">
+        </p>
+      </form>
+    </section>
+
+    <section class="plan">
+      <h2>Planned Route Details</h2>
+
+      <p>
+        There will be number stations on your journey.
+      </p>
+
+      <p>
+        Stations enroute to your destination:
+        <ul>
+        </ul>
+      </p>
+
+      <p>
+        Change at station
+      </p>
+
+    </section>
+    <p>The journey start and end stations need to differ.</p>
+  </body>
+</html>

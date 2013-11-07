@@ -1,0 +1,42 @@
+/*
+Add a script tag to the bottom.
+Change the body style so it has a font-family of "Arial, sans-serif".
+Replace each of the spans (nickname, favorites, hometown) with your own information.
+Iterate through each li and change the class to "listitem". Add a style tag that sets a rule for "listitem" to make the color red.
+Create a new img element and set its src attribute to a picture of you. Append that element to the page.
+*/
+<!DOCTYPE html>
+<html>
+ <head>
+  <meta charset="utf-8"/>
+  <title>About Me</title>
+</head>
+<body>
+  <h1>About Me</h1>
+
+  <ul>
+    <li>Nickname: <span id="nickname"></span>
+    <li>Favorites:  <span id="favorites"></span>
+    <li>Hometown: <span id="hometown"></span>
+  </ul>
+  <script>
+    var pageNode = document.getElementsByTagName('body')[0];
+    pageNode.setAttribute('style','font-familiy: Arial, sans-serif');
+    var nick = document.getElementById("nickname");
+    nick.innerHTML = "fuzzy";
+    var fav = document.getElementById("favorites");
+    fav.innerHTML = "kittens, nachos, cerulean, the sea";
+    var home = document.getElementById("hometown");
+    home.innerHTML = "Port Elizabeth";
+
+    var listitems = document.getElementsByTagName("li");
+    for(var i = 0, listitem; listitem = listitems[i]; i++){
+      listitem.setAttribute('class',"listitem");
+      listitem.setAttribute('style','color: red');
+    }
+    var image = document.createElement('img');
+    image.src = 'http://www.buzzrentalssf.com/Lenore.jpg';
+    pageNode.appendChild(image);
+  </script>
+ </body>
+</html>

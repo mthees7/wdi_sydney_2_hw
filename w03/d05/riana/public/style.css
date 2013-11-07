@@ -1,6 +1,3 @@
-/*****************************************************************************/
-/**                               generic layout                            **/
-/*****************************************************************************/
 html{
   height: 100%;
 }
@@ -48,41 +45,90 @@ html{
     background-image: linear-gradient(#599bdc, #3072b3);
 }
 
-h1, h2{
-  font-family: 'Griffy', cursive;
-}
 body{
   width: 940px;
   height: 100%;
   margin: 0 auto;
-  font-family: 'Josefin Sans', sans-serif;
+  font-family: 'Questrial', sans-serif;
   font-size: 1em;
-  background-color: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#71A590), to(#A56B61), color-stop(1,#333333));
+  background-color: rgba(113,165,144,0.5);
+}
+header{
+  padding: 10px;
+}
+h1, h2 {
+  display: inline;
+  line-height: 2.5em;
+  font-family: 'Cinzel Decorative', cursive;
+  padding: 0;
+  margin: 0 20%;
 }
 nav{
   display: inline;
+  padding: 10px;
+  width: 40%;
+}
+nav ul{
+  position: relative;
+  display: inline;
+  padding: 0;
+  margin: 0;
+  top: -5px;
 }
 nav ul li{
   display: inline;
   list-style: none;
 }
+.home_img{
+  position: relative;
+  width: 100%;
+  padding: 10px 0;
+  margin: 10px 0 10px -200px;
+  box-shadow: inset 0 0 1em #E2FFF3;
+}
+.artist_main{
+  display: inline-block;
+  width: 50%;
+  border-right: 1px solid rgba(226,255,243,0.5);
+}
+.artist_main p{
+  display: inline-block;
+  padding: 0;
+  margin: 5px;
+  width: 100%;
+}
+.artist_main h2{
+  padding: 0;
+  margin: 0 10%;
+}
 
-/*home page layout*/
-.last_post{
-  display: inline;
-  width: 70%;
-}
-.last_post h1{
-  display: inline;
-}
-.recent_posts{
-  display: inline;
-  width: 30%;
-}
-/*form layout for add and update*/
-.formLabel{
+.label{
 
 }
-.formInput{
+.mod_artworks{
 
+}
+.mod_artists{
+
+}
+.artwork_main{
+  display: inline-block;
+  position: relative;
+  width: 50%;
+  float: right;
+}
+.artwork_main h2{
+  padding:0;
+  margin: 0 10%;
+}
+.artwork_main p{
+  display: inline-block;
+  padding: 0;
+  margin: 5px;
+  width: 100%;
+}
+.container{
+  position: relative;
+  padding-bottom: 20px;
+  margin-bottom: 20px;
 }

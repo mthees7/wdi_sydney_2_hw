@@ -1,3 +1,6 @@
+DROP TABLE posts CASCADE;
+DROP TABLE comments CASCADE;
+
 CREATE TABLE posts(
   id SERIAL4 PRIMARY KEY,
   title VARCHAR(50) NOT NULL,
@@ -19,3 +22,17 @@ INSERT INTO posts(title, category, body, image) VALUES('Day 8', 'Programming' ,'
 INSERT INTO posts(title, category, body, image) VALUES('Day 9', 'Programming' ,'Day1 through week 3 and I have learned how to program server side code with Ruby, build websites with HTML and CSS using the Sinatra framework and storing data in the postgress database.','/img1.jpg');
 INSERT INTO posts(title, category, body, image) VALUES('Day 10', 'Programming' ,'Day 2 through week 3 and I have learned how to program server side code with Ruby, build websites with HTML and CSS using the Sinatra framework and storing data in the postgress database.','/img1.jpg');
 INSERT INTO posts(title, category, body, image) VALUES('Day 11', 'Programming' ,'Halfway through week 3 and I have learned how to program server side code with Ruby, build websites with HTML and CSS using the Sinatra framework and storing data in the postgress database.','/img1.jpg');
+
+CREATE TABLE comments(
+  id SERIAL4 PRIMARY KEY,
+  participant VARCHAR(50) NOT NULL,
+  comment TEXT NOT NULL,
+  created_at TIMESTAMP,
+  updated_at TIMESTAMP,
+  post_id serial4,
+  FOREIGN KEY (post_id) REFERENCES posts (id)
+)
+
+INSERT INTO comments(participant, comment) VALUES ('fuzzy','comment1');
+INSERT INTO comments(participant, comment) VALUES ('lumpkin','comment2');
+INSERT INTO comments(participant, comment) VALUES ('bubbles','comment3');

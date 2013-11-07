@@ -18,9 +18,19 @@ ActiveRecord::Base.logger = Logger.new(STDOUT)
 
 class Post < ActiveRecord::Base
   attr_accessible :title, :category, :body, :image, :created_at
+  has_many :comments
 
   def to_s
     "#{title} - #{category}"
+  end
+end
+
+class Comment < ActiveRecord::Base
+  attr_accessible :participant, :comment
+  belongs_to :post
+
+  def to_s
+    "#{participant} - #{comment}"
   end
 end
 
@@ -103,4 +113,49 @@ get '/post/:post_id/delete' do
   @delete_post.destroy
   #route user back to the archive page
   redirect to '/'
+end
+
+get '/post/:post_id/comment' do
+  @post = Post.find(params[:post_id])
+  erb :comment
+end
+
+post '/post/:post_id/comment' do
+  #get the selected post from the db
+  @current_post = Post.find(params[:post_id])
+  #create a new comment and assign form values
+  @comment = Comment.new
+  @comment.participant = params['participant']
+  @comment.comment = params['comment']
+  #assign the commen to the post
+  @current_post.comments << @comment
+  #save the changes
+  @comment.save
+  #return user to the home page
+  redirect to "/post/#{params[:post_id]}"
+end
+
+get '/post/:post_id/comment/:comment_id/edit' do
+  @post = Post.find(params[:post_id])
+  #get the selected comment from db
+  @current_comment = Comment.find(params[:comment_id])
+  #return to the home page so it can be updated
+  erb :comment
+end
+
+post '/post/:post_id/comment/:comment_id/edit' do
+  @edit_comment = Comment.find(params[:comment_id])
+  @edit_comment.participant = params['participant']
+  @edit_comment.comment = params['comment']
+  @edit_comment.save
+  redirect to "/post/#{params[:post_id]}"
+end
+
+get '/post/:post_id/comment/:comment_id/delete' do
+  #get the selected comment from the db
+  @current_comment = Comment.find(params[:comment_id])
+  #delete the comment from the post
+  @current_comment.destroy
+  #return the user to the home page
+  redirect to "/post/#{params[:post_id]}"
 end
