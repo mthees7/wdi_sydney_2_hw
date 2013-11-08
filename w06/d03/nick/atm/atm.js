@@ -24,33 +24,18 @@ window.onload = function () {
         // Any code you put in here will be run when the checkingWithdraw button is clicked
         var withdraw = document.getElementById("checkingAmount").value;
         withdraw = parseFloat(withdraw);
-        if(withdraw <= checking.balance) {
         checking.withdraw(withdraw);
         document.getElementById("balance1").innerHTML = "$" + checking.balance;
-        } else if(withdraw <= (checking.balance + savings.balance)) {
-          //take checking.balance down to zero.
-          var protection = checking.balance;
-          checking.balance = 0;
-          //reduce savings.balance by the remainder.
-          savings.balance = savings.balance - (withdraw - protection);
-          document.getElementById("balance1").innerHTML = "$" + checking.balance;
-          document.getElementById("balance2").innerHTML = "$" + savings.balance;
-        }
-          else {
-          alert("Sorry, you have insufficient funds.");
-        }
+        document.getElementById("balance2").innerHTML = "$" + savings.balance;
     };
 
     document.getElementById("savingsWithdraw").onclick = function(event) {
         // Any code you put in here will be run when the savingsWithdraw button is clicked
         var withdraw = document.getElementById("savingsAmount").value;
         withdraw = parseFloat(withdraw);
-        if(withdraw <= savings.balance) {
         savings.withdraw(withdraw);
+        document.getElementById("balance1").innerHTML = "$" + checking.balance;
         document.getElementById("balance2").innerHTML = "$" + savings.balance;
-      } else {
-        alert("Sorry, you have insufficient funds.");
-      }
     };
 
     var img = document.getElementById('mainpicture');
@@ -65,7 +50,16 @@ window.onload = function () {
             this.balance += amount;
         },
         withdraw: function (amount) {
+          if(amount <= checking.balance) {
             this.balance -= amount;
+          } else if(amount <= (checking.balance + savings.balance)) {
+            var protection = checking.balance;
+            checking.balance = 0;
+            //reduce savings.balance by the remainder.
+            savings.balance = savings.balance - (amount - protection);
+          } else {
+            alert("Sorry, you have insufficient funds.");
+          }
         }
     };
 
@@ -75,6 +69,15 @@ window.onload = function () {
             this.balance += amount;
         },
         withdraw: function (amount) {
+          if(amount <= savings.balance) {
             this.balance -= amount;
+          } else if(amount <= (checking.balance + savings.balance)) {
+            var protection = savings.balance;
+            savings.balance = 0;
+            //reduce checking.balance by the remainder.
+            checking.balance = checking.balance - (amount - protection);
+          } else {
+            alert("Sorry, you have insufficient funds.");
+          }
         }
     };
