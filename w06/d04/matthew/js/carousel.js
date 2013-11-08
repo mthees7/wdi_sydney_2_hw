@@ -2,7 +2,31 @@ var carousel = document.getElementById('carousel');
 var next = document.getElementById('next');
 var previous = document.getElementById('previous');
 
-carousel.style.marginLeft = 0;
+$("#carousel").css("left",0);
+
+
+
+$( "#previous" ).click(function() {
+  if (parseInt(($( "#carousel" ).css("left"))) >= 0) {
+    $("#carousel").animate({ "left": (-($("#carousel").width() - 612) + 'px') }, "slow" )
+  } else {
+    $( "#carousel" ).animate({ "left": "+=612px" }, "slow");
+  }
+});
+
+$( "#next" ).click(function(){
+  if (parseInt(($( "#carousel" ).css("left"))) < -612) {
+    $("#carousel").animate({ "left": '0px' }, "slow" )
+  } else {
+    $( "#carousel" ).animate({ "left": "-=612px" }, "slow");
+  }
+
+});
+
+
+
+
+
 
 // Slides the images to the left or goes back to the first image if it has reached the end
 function toLeft(){
