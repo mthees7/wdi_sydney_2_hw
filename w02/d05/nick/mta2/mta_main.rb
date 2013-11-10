@@ -24,7 +24,6 @@ get '/' do
     end
   end
 
-
   $lines = {
     :Nline => ["Nts", "N34", "N28", "N23", "Aus", "N08"],
     :Lline => ["L08", "L06", "Aus", "L03", "L01"],
