@@ -3,9 +3,8 @@ $(document).ready(function(){
   var next = document.getElementById('next');
   var previous = document.getElementById('previous');
   var width = 612;
-  var current_width = 0;
   var this_img = 0;
-
+  var rotate = setInterval(autoRotate, 5000);
   carousel.style.marginLeft = 0;
 
   //mouseover event listener to change next and previous button opacity
@@ -18,42 +17,40 @@ $(document).ready(function(){
     $(this).removeClass('highlighted');
   });
 
-  //right arrow key press event listener to change the next button opacity
-  $('#next').keydown(function(event){
-    if(event.keyCode === 39){
-      $(this).addClass('highlighted');
-    }
-  });
-
-  //left arrow key press event listent to change the previous button opacity
+  function autoRotate(){
+    toRight();
+  }
 
   // Slides the images to the left or goes back to the first image if it has reached the end
   function toLeft(){
-    if(current_width === 0){
-      current_width = -1224;
-      $('#carousel').animate({'margin-left': (($("img").length - 1) * -612) + 'px'}, 3000);
+    if(this_img === 0){
+      $('#carousel').animate({'margin-left': -(($("img").length - 1) * width) + 'px'}, 3000);
+      this_img = ($("img").length - 1);
+
     } else {
-        current_width += width;
-        $('#carousel').animate({'margin-left': (current_width) + 'px'}, 3000);
+        this_img -= 1;
+        $('#carousel').animate({'margin-left': -(this_img * width) + 'px'}, 3000);
     }
   }
 
   // Slides the images to the right or goes back to the last image if it has reached the end
   function toRight(){
-    if(current_width === -1224 ){
-      current_width = 0;
-      $('#carousel').animate({'margin-left': current_width + 'px'}, 3000);
+    if(this_img === ($("img").length - 1) ){
+      this_img = 0;
+      $('#carousel').animate({'margin-left': (this_img * width) + 'px'}, 3000);
     } else {
-      current_width -= width;
-      $('#carousel').animate({'margin-left': current_width + 'px'}, 3000);
+      this_img += 1;
+      $('#carousel').animate({'margin-left': -(this_img * width) + 'px'}, 3000);
     }
   }
 
   //Hook up the next and previous buttons to call the toLeft and toRight functions
   $('#next').click(function(event){
+    clearInterval(rotate);
     toRight();
   });
   $('#previous').click(function(event){
+    clearInterval(rotate);
     toLeft();
   });
 
