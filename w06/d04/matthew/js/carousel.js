@@ -1,6 +1,3 @@
-var carousel = document.getElementById('carousel');
-var next = document.getElementById('next');
-var previous = document.getElementById('previous');
 
 $("#carousel").css("left",0);
 
