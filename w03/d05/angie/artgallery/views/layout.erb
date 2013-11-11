@@ -1,0 +1,21 @@
+<!DOCOTYPE html >
+<html lang ='en'>
+  <head>
+    <meta charset='utf-8'
+    <title>The art gallery</title>
+    <link rel="stylesheet" href="/style.css">
+  </head>
+  <body>
+    <header><a href="/">The Art Gallery</a></header>
+    <nav>
+      <ul>
+        <li><a href="/artists">Artists</a></li>
+        <li><a href='/artists/new'>New Artist</a><li>
+        <li><a href='/artworks/new'>New Artwork</a><li>
+        <li><a href="/artworks">Art Works</a></li>
+
+      </ul>
+    </nav>
+    <%= yield %>
+  </body>
+ </html>

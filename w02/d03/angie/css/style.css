@@ -4,7 +4,7 @@
 }
 
 body {
-  font-family: Times New Roman;
+  font-family: times;
 }
 
 header img {
@@ -36,11 +36,6 @@ p.main_p {
   font-weight: lighter;
   letter-spacing: -.1px;
 }
-.boxes img {
-  border: 1px solid white;
-  outline: 5px solid #CAC9CB;
-  margin: 0 4.5px 19px 4.5px;
-}
 
 a {
   color: #59B1CB;
@@ -48,9 +43,13 @@ a {
 }
 
 a:hover {
-    color: #20222a;
+    color: red;
     text-decoration: underline;
 }
 
-
+  .boxes img {
+  border: 1px solid white;
+  outline: 5px solid #CAC9CB;
+  margin: 0 4.5px 19px 4.5px;
+}
 
