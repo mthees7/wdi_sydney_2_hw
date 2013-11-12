@@ -2,24 +2,42 @@ $(document).ready(function(){
   var carousel = document.getElementById('carousel');
   var next = document.getElementById('next');
   var previous = document.getElementById('previous');
-  var width = 612;
+  var width = parseInt($("#window").css("width"));
   var this_img = 0;
-  var rotate = setInterval(autoRotate, 5000);
+  var rotate = null
   carousel.style.marginLeft = 0;
+
+  //auto scroll when screen is inactive http://jsfiddle.net/tCtJq/
+  var waitForInactivity = function (){
+    clearTimeout(rotate);
+    rotate = setTimeout(autoRotate, 10000);
+  }
+
+  var autoRotate = function(){
+    toRight();
+    waitForInactivity();
+  }
 
   //mouseover event listener to change next and previous button opacity
   $('#next, #previous').mouseover(function(event){
     $(this).addClass('highlighted');
+    $(this).css('cursor','pointer');
+  });
+
+  $(document).keypress(function(event){
+    console.log("key pressed");
+    if(event.which === 93){
+      console.log("right key");
+      event.preventDefault();
+      toRight();
+    }
+
   });
 
   //mouseexit event listener to reset the next and previous button opacity
   $('#next, #previous').mouseleave(function(event){
     $(this).removeClass('highlighted');
   });
-
-  function autoRotate(){
-    toRight();
-  }
 
   // Slides the images to the left or goes back to the first image if it has reached the end
   function toLeft(){
@@ -46,12 +64,13 @@ $(document).ready(function(){
 
   //Hook up the next and previous buttons to call the toLeft and toRight functions
   $('#next').click(function(event){
-    clearInterval(rotate);
     toRight();
+    waitForInactivity();
   });
   $('#previous').click(function(event){
-    clearInterval(rotate);
     toLeft();
+    waitForInactivity();
   });
+  waitForInactivity();
 
 });
