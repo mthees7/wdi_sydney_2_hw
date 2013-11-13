@@ -1,0 +1,7 @@
+
+<form method="post" action="<%=ocean_path(@ocean.id)%>">
+  <p>Name: <input type="text" name="ocean[name]" value="<%= @ocean.name %>" autofocus></p>
+  <p>Average Depth: <input type="text" name="ocean[avg_depth]" value="<%= @ocean.avg_depth %>">
+  </p>
+  <button>Ocean me prawn!</button>
+</form>

@@ -1,0 +1,6 @@
+<h2>Oceans</h2>
+<ul>
+  <% @oceans.each do |ocean| %>
+    <li><%= link_to ocean.name, ocean_path(ocean) %> has an average depth of <%= number_to_human ocean.avg_depth%>.</li>
+  <% end %>
+</ul>
