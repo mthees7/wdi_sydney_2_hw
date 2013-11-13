@@ -24,14 +24,13 @@ $(document).ready(function(){
     $(this).css('cursor','pointer');
   });
 
-  $(document).keypress(function(event){
-    console.log("key pressed");
-    if(event.which === 93){
-      console.log("right key");
-      event.preventDefault();
+  $(document).keydown(function(event){
+    var code = event.keyCode || event.which;
+    if(code == 39){
       toRight();
+    } else if (code == 37){
+      toLeft();
     }
-
   });
 
   //mouseexit event listener to reset the next and previous button opacity
