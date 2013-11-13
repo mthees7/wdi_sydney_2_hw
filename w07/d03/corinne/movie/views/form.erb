@@ -1,0 +1,19 @@
+<form method="get" action="/">
+  <input name="movierequest" placeholder="Enter movie title" id="movierequest">
+  <input type="submit" value="Look Up Movie" id="submit">
+</form>
+
+<div id="movies"></div>
+
+<script type="text/underscore-template" id="movie_template">
+    <img src="{{= Poster }}">
+      <div id="desc">
+        <h2><strong>{{= Title }}</strong></h2>
+        <p><b><u>Plot:</u></b> {{= Plot }}</p>
+        <p><b><u>Year:</u></b> {{= Year }}</p>
+        <p><b><u>Runtime:</u></b> {{= Runtime }}</p>
+        <p><b><u>Genre:</u></b> {{= Genre }}</p>
+        <p><b><u>Director:</u></b> {{= Director }}</p>
+        <p><b><u>Actors:</u></b> {{= Actors }}</p>
+      </div>
+</script>
