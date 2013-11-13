@@ -40,24 +40,34 @@ var player = {
 
   // Takes a new letter as input and updates the game
   makeGuess: function(letter){
-     if(this.guessCount === 8){
-      this.checkLose();
-     } else {
+      $('#letterField').val('');
+      this.guessedLetters.push(letter);
+      var result = word.checkLetters(this.guessedLetters);
+
+      if(this.guessCount === 8){
+        game.giveUp();
+        $("#letterField").prop('disabled', true);
+        this.gameStatus(result.matched);
+      } else {
         this.guessCount += 1;
-        this.guessedLetters.push(letter);
-        var result = word.checkLetters(this.guessedLetters);
         game.updateDisplay(result.matched, this.guessedLetters, (this.MAX_GUESSES - this.guessCount));
-     }
+        if (!_.contains(result.matched,'_')){
+          this.gameStatus(result.matched);
+        }
+      }
   },
 
   // Check if the player has won and end the game if so
-  checkWin: function(wordString){
-    console.log("You win");
-  },
-
-  // Check if the player has lost and end the game if so
-  checkLose: function(wrongLetters){
-
+  gameStatus: function(wordString){
+    if(_.contains(wordString, '_')){
+      $('#outcome').show();
+      $('#gamePlayArea').hide();
+      $('#stmt').text("YOU LOSE!");
+    } else {
+      $('#outcome').show();
+      $('#gamePlayArea').hide();
+      $('#stmt').text("YOU WIN!");
+    }
   }
 };
 
@@ -69,11 +79,14 @@ var game = {
     player.guessedLetters = [];
     player.guessCount = 0;
     this.updateDisplay('','','');
+    $("#letterField").prop('disabled', false);
+    $('#letterField').val('');
   },
 
   // Reveals the answer to the secret word and ends the game
   giveUp: function(){
     $('#wordString').text(word.secretWord);
+    $("#letterField").prop('disabled', true);
   },
 
   // Update the display with the parts of the secret word guessed, the letters guessed, and the guesses remaining
@@ -87,8 +100,9 @@ var game = {
 
 window.onload = function(){
   // Start a new game
+  $('#outcome').hide();
   game.resetGame();
-   $('#letterField').focus();
+  $('#letterField').focus();
 
   // Add event listener to the letter input field to grab letters that are guessed
   $('#letterField').keypress(function(event){
@@ -96,24 +110,23 @@ window.onload = function(){
      var letter = String.fromCharCode(event.keyCode);
      //check if the guess is correct
      player.makeGuess(letter);
-     //clear the field for the next guess
-     $('#letterField').val('');
-     //give the input field focus for the next guess
-     $('#letterField').focus();
+
   });
 
   // Add event listener to the reset button to reset the game when clicked
   $('#resetButton').click(function(event){
     game.resetGame();
     //clear the field for the next guess
-    $('#letterField').val('');
   });
 
   // Add event listener to the give up button to give up when clicked
   $('#giveUpButton').click(function(event){
     game.giveUp();
-     //clear the field for the next guess
-     $('#letterField').val('');
+  });
 
+  $('#newButton').click(function(event){
+    game.resetGame();
+    $('#outcome').hide();
+    $('#gamePlayArea').show();
   });
 };
