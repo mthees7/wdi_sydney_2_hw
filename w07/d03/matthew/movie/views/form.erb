@@ -1,0 +1,30 @@
+
+<html>
+
+  <h1>Matt's Movie Database</h1>
+  <h3>Enter a movie title to search below</h3>
+
+  <form action="/movie" method="get">
+    <input id="title" name="title" placeholder="movie title">
+    <input type="submit" value="Search"/>
+  </form>
+
+  <div id="movie">
+  </div>
+
+  <script id="movie_template" type="text/underscore-template">
+    <div>
+      <p class="title"> {{= Title }} </p>
+      <p class="stars"> Starring: {{= Actors }} </p>
+      <p> Directed By: {{= Director }} </p>
+      <p> Runtime: {{= Runtime }} </p>
+      <div class="plot_div">
+        <p class="plot"> Plot: {{= Plot }} </p>
+      </div>
+    </div>
+  </script>
+
+</html>
+
+
+
