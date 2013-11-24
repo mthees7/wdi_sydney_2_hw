@@ -18,7 +18,7 @@ var windowWidth = $('#window').width();
  }
 
 // Slides the images to the right or goes back to the last image if it has reached the end
-
+// This complicated little line simple calculates the width of the entire carousel and allows the right scroll if there is sufficient width for the window
 var toRight = function () {
   if (-parseInt($("#carousel").css('left')) < (carouselWidth - windowWidth)) {
     $('#carousel').animate( {
@@ -45,4 +45,6 @@ $(document).ready(function() {
 
 // Add event listeners for mouseover and mouseexit to change the opacity of the next and previous buttons.
 // control by keyboard
+
+
 // animation
