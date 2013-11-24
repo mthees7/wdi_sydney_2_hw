@@ -1,3 +1,5 @@
+// I still need to re-do hangman - this is a code reference for myself based on Rianas submitted code.
+
 $(document).ready(function() {
   $('#letterGuess').click(userGuess);
 
