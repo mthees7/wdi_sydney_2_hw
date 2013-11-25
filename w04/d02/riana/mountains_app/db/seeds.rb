@@ -1,0 +1,4 @@
+Mountain.destroy_all
+Mountain.create(:name => 'Mount Everest', :image => 'http://upload.wikimedia.org/wikipedia/commons/thumb/e/e7/Everest_North_Face_toward_Base_Camp_Tibet_Luca_Galuzzi_2006.jpg/280px-Everest_North_Face_toward_Base_Camp_Tibet_Luca_Galuzzi_2006.jpg',:height => 8848, :location => 'Himalayas')
+Mountain.create(:name => 'Mount Kilimanjaro', :image => 'http://upload.wikimedia.org/wikipedia/commons/thumb/9/91/Mount_Kilimanjaro.jpg/280px-Mount_Kilimanjaro.jpg', :height => 5895, :location => 'Tanzania')
+Mountain.create(:name => 'Mount Fuji', :image => 'http://upload.wikimedia.org/wikipedia/commons/thumb/2/2a/01_Fujisan_from_Yamanakako_2004-2-7.jpg/280px-01_Fujisan_from_Yamanakako_2004-2-7.jpg', :height => 3776, :location => 'Japan')

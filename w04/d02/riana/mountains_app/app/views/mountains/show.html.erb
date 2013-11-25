@@ -1,0 +1,10 @@
+<h1><%= @mountain.name%></h1>
+<div>
+  <p><%= @mountain.height %> meters</p>
+  <p><%= @mountain.location %></p>
+  <img src="<%= @mountain.image %>">
+</div>
+<div>
+  <%= link_to 'Edit Mountain', mountain_edit_path(@mountain.id), :class => 'button' %>
+  <%= button_to 'Delete Mountain', mountain_delete_path(@mountain.id), :class => 'button' %>
+</div>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href='http://fonts.googleapis.com/css?family=Cinzel+Decorative' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Questrial' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="/style.css"></link>
+    <title>GA Art Gallery</title>
+  </head>
+  <body>
+    <header>
+      <h1>GA Art Gallery</h1>
+      <nav>
+        <ul>
+          <a class="button" href="/">Home</a>
+          <a class="button" href="/artist">Artists</a>
+          <a class="button" href="/artwork">Artworks</a>
+        </ul>
+      </nav>
+    </header>
+    <img class="home_img" src="http://th07.deviantart.net/fs70/PRE/f/2013/292/2/7/underwater_by_tatasz-d6r0uez.jpg"/>
+    <section class="container">
+      <%= yield %>
+    </section>
+  </body>
+</html>

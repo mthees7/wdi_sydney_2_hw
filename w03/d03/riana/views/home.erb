@@ -1,0 +1,38 @@
+<section class="last_post">
+  <h2><%= @current_post.title %> - <%= @current_post.category%></h2>
+  <p><%= @current_post.created_at %></p>
+  <p><%= @current_post.body %></p>
+  <p><%= @current_post.image %></p>
+  <a class="button" href="/post/<%= @current_post.id %>/comment">Add Comment</a>
+  <a class="button" href="/post/<%= @current_post.id %>/edit">Edit Post</a>
+  <a class="button remove" href="/post/<%= @current_post.id %>/delete">Delete Post</a>
+</section>
+<!-- disgus service that manages user comments on a website was included here -->
+<!-- my comment logic-->
+
+<div class="post_comments">
+  <!-- get the comments attribute hash on the post object -->
+   <% @current_post.comments.each do |comment| %>
+     <p>
+        <span class="who"><%= comment.participant %></span>
+        <span class="says"><%= comment.comment %></span>
+        <a class="button" href='/post/<%= @current_post.id %>/comment/<%= comment.id %>/edit'>Edit</a>
+        <a class="button" href='/post/<%= @current_post.id %>/comment/<%= comment.id %>/delete'>Delete</a>
+    </p>
+  <% end %>
+</div>
+
+<aside class="recent_posts">
+  <h2>The last 5 blog posts</h2>
+  <div class="post_list">
+    <% @latest_posts.each do |post| %>
+      <p>
+        <a href='/post/<%= post['id'] %>'><%= post['title'] %>
+          <span><%= post['category'] %></span>
+          <span><%= post['body'].slice(0,20) %></span>
+          <span><%= post['created_at']%></span>
+        </a>
+    </p>
+    <% end %>
+  </div>
+</aside>
