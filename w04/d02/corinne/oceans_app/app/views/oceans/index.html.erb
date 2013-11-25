@@ -1,0 +1,10 @@
+<h1>Oceans of the World</h1>
+
+<div class="oceanmenu">
+ <ul>
+    <% @oceans.each do |ocean| %>
+      <li><%= link_to ocean.name, ocean_path(ocean.id) %></li>
+    <% end %>
+  </ul>
+</div>
+

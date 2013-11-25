@@ -1,0 +1,9 @@
+<ol>
+  <% @artists.each do |artist| %>
+    <h2><%= link_to artist.name, artist_path(artist.id) %> </h2>
+    <ul>
+      <li><%= artist.dob %> </li>
+      <li><%= artist.nationality %> </li>
+    </ul>
+  <% end %>
+</ol>

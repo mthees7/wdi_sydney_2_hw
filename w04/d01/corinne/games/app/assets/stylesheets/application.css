@@ -1,0 +1,148 @@
+/*---------------------------------
+              BODY
+---------------------------------*/
+body {
+  background-color: rgba(0, 153, 140, 1);
+  font-family: 'Fascinate Inline', cursive;
+}
+
+
+
+/*---------------------------------
+              NAV
+---------------------------------*/
+nav {
+/*  background-color: rgba(28, 204, 188, 1);*/
+  display: inline-block;
+  font-size: 1.5em;
+  float: right;
+  width: 40%;
+}
+
+nav li {
+  height: 80px;
+  min-width: 60px;
+  display: block;
+  list-style: none;
+  text-align: center;
+  background-color: rgba(247, 121, 152, 1);
+  border: 5px solid rgba(255, 40, 67, 1);
+  margin-top: 0;
+  margin-bottom: 20px;
+  margin-right: 10px;
+  padding-top: 20px;
+  padding-right: 10px;
+  padding-bottom: -20px;
+  padding-left: 10px;
+}
+
+nav li a {
+  text-decoration: none;
+  margin-top: 10px;
+}
+
+
+
+
+
+/*---------------------------------
+              CONTAINER
+---------------------------------*/
+
+.container {
+  padding: 20px;
+  background-color: rgba(28, 204, 188, 1);
+  text-align: center;
+  margin-top: 10px;
+  display: inline-block;
+  width: 50%;
+  min-height: 460px;
+  margin-left: 10px;
+  color: rgba(102, 0, 204, 1);
+}
+
+h1 {
+  font-size: 3.3em;
+}
+
+h2 {
+  font-size: 1.7em;
+  margin-top: 60px;
+  color: rgba(255, 40, 67, 1);
+}
+
+
+p {
+  font-size: 1.5em;
+}
+
+.answer p {
+  font-size: 3em;
+  margin-top: 150px;
+}
+
+.reveal p {
+  background-color: rgba(255, 40, 67, 1);
+  border: 20px doted rgba(255, 40, 67, 1);
+  border-radius: 50%;
+  padding: 20px;
+}
+/*---------------------------------
+              LISTS
+---------------------------------*/
+
+.number {
+  margin-left: -40px;
+}
+
+.number li {
+  list-style: none;
+  display: inline-block;
+  font-size: 3em;
+  width: 58px;
+}
+
+.number li a {
+  text-decoration: none;
+  color: rgba(255, 40, 67, 1);
+
+}
+
+.rps li {
+  diplay: block;
+  list-style: none;
+  font-size: 2.5em;
+
+}
+
+.rps li a {
+  text-decoration: none;
+  color: rgba(255, 40, 67, 1);
+
+}
+
+
+/*---------------------------------
+              INPUT
+---------------------------------*/
+
+input {
+  background-color: white;
+  color: rgba(255, 40, 67, 1);
+  font-weight: bold;
+  font-size: 1.5em;
+  border: 3px solid rgba(255, 40, 67, 1);
+  margin-bottom: 20px;
+}
+
+
+
+
+
+
+
+
+
+
+
+

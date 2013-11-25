@@ -1,0 +1,9 @@
+<ol>
+  <% @artworks.each do |artwork| %>
+    <h2><%= link_to artwork.title, artwork_path(artwork.id) %></h2>
+    <h4><%= artwork.artist.name if artwork.artist.present? %></h4>
+    <p><%= artwork.year %></p>
+    <%= image_tag artwork.photo %>
+  <% end %>
+</ol>
+

@@ -1,0 +1,28 @@
+<section>
+  <form method='post' action='<%=  @artwork.nil? ? "/artworks/create" : "/artworks/#{@artwork.id}/update" %>'>
+
+
+    <label>Artist:</label>
+
+      <select name="dropmenu_artist">
+        <% @artists.each do |artist| %>
+          <option value=<%= artist.id if @artwork %> <%= 'selected' if artist.id == @artwork.artist.id %>><%= artist.artist_name %></option>
+        <% end %>
+      </select>
+
+
+
+    <label>Title:</label>
+      <input value='<%= @artwork['artwork_title'] if @artwork %>' type='text' name='artwork_title'>
+
+    <label>Year:</label>
+      <input value='<%= @artwork['year'] if @artwork %>' type='text' name='year'>
+
+    <label>Photo URL:</label>
+      <input value='<%= @artwork['photo'] if @artwork %>' type='text' name='photo'>
+
+
+    <button class='new_edit'><%= @artwork.nil? ? "New artwork" : "Edit Artwork"  %></button>
+
+  </form>
+</section>

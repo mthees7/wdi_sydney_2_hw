@@ -1,0 +1,31 @@
+<h1><%= @ocean.name %> Ocean</h1>
+
+<div class="info">
+  <ul>
+    <% if @ocean.area.present? %>
+      <li><strong>Area: </strong><%= number_to_human(@ocean.area, :units => :area)%></li>
+    <% end %>
+    <br>
+    <% if @ocean.avg_depth.present? %>
+      <li><strong>Average depth: </strong><%= number_to_human(@ocean.avg_depth, :units => :distance)%></li>
+    <% end %>
+    <br>
+    <% if @ocean.max_depth.present? %>
+      <li><strong>Greatest depth: </strong><%= number_to_human(@ocean.max_depth, :units => :distance)%></li>
+    <% end %>
+    <br>
+    <% if @ocean.deepest_place.present? %>
+      <li>The deepest place within this ocean is <%= @ocean.deepest_place %></li>
+    <% end %>
+  </ul>
+
+  <div class="edit"><%= link_to 'Edit', oceans_edit_path(@ocean.id) %></div>
+  <div class="button"><%= button_to 'Vanquish Ocean', oceans_destroy_path(@ocean.id) %></div>
+
+</div>
+
+<% if @ocean.image.present? %>
+  <%= image_tag @ocean.image %>
+<% end %>
+
+

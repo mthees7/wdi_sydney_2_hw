@@ -1,0 +1,40 @@
+#container {
+  max-width: 960px;
+  margin: auto;
+
+}
+
+.box {
+  border: 1px solid #000;
+  width: 50px;
+  height: 50px;
+  display: inline-block;
+}
+
+#controls {
+
+}
+
+.pixel {
+  width: 14px;
+  height: 14px;
+  margin: 2px;
+  float: left;
+  border: 1px dashed black;
+}
+
+.thumbnail {
+  width: 100px;
+  height: 100px;
+  margin: auto;
+}
+
+.image_canvas {
+  width: 100%;
+  position: absolute;
+  max-width: 960px;
+  z-index: -9999;
+}
+
+
+

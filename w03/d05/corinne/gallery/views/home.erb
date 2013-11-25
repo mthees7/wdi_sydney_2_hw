@@ -1,0 +1,23 @@
+<% @artworks.each do |artwork| %>
+  <section>
+    <div class='artwork'>
+
+      <h2><a href='/artworks/<%= artwork['id'] %>'><%= artwork['artwork_title'] %></a></h2>
+
+      <article>
+        <h4><%= artwork.artist.artist_name %></h4>
+        <p class='year'><%= artwork.year %></p>
+        <img src="<%= artwork['photo'] %>">
+      </article>
+
+      <footer>
+        <div class='link'><a href='/artworks/<%= artwork['id'] %>/edit'>Edit</a></div>
+        <form action='/artworks/<%= artwork['id'] %>/delete' method='post'>
+          <button class='button_delete'>Delete</button>
+        </form>
+      </footer>
+
+    </div>
+
+  </section>
+<% end %>
