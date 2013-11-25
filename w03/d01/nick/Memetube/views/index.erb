@@ -1,0 +1,9 @@
+<section class="preview">
+
+  <ul>
+  <% @movies.each do |movie| %>
+    <li><a href="/movies/<%= movie['id'] %>"><%= movie['title'] %></a></li>
+    <li><iframe width="420" height="315" src="//<%= movie['url'] %>" frameborder="0"></iframe></li>
+  <% end %>
+  </ul>
+</section>

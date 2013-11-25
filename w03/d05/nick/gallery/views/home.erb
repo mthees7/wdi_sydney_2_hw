@@ -1,0 +1,19 @@
+
+<form method="get" action="/">
+  <label for="artist">Choose an artist</label>
+  <select name="artist">
+    <%= erb :artist_menu %>
+  </select>
+
+  <input type="submit" value="Submit">
+
+  <label for="artwork">Choose an artwork</label>
+  <select name="artwork">
+    <%= erb :artwork_menu %>
+  </select>
+
+  <input type="submit" value="Submit">
+
+</form>
+
+</html>

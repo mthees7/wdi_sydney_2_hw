@@ -1,0 +1,24 @@
+<%= form_for @artist do |f| %>
+<p>
+  <%= f.label :name %>
+  <%= f.text_field :name %>
+</p>
+<p>
+  <%= f.label :hometown %>
+  <%= f.text_field :hometown %>
+</p>
+<p>
+  <%= f.label :profile_pic %>
+  <%= f.text_field :profile_pic %>
+</p>
+
+<p>
+<% Artwork.where(:artist_id => nil).order(:title).each do |artwork| %>
+  <p>
+  <%= check_box_tag 'artist[artwork_id][]', artwork.id %>
+  <%= artwork.title %>
+  </p>
+  <% end %>
+</p>
+  <%= f.submit %>
+<% end %>

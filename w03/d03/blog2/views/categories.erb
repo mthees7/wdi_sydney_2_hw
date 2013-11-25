@@ -1,0 +1,13 @@
+<% @category.each do |category| %>
+  <div class="sidebar">
+    <form action='/categories/<%= category.id %>/delete' method='post'>
+      <button>Delete</button>
+    </form>
+
+    <a href='/categories/<%= category.id %>/edit/'>Edit</a>
+    <%= post['title'] %>
+    <%= post['body'] %>
+    <%= post['category'] %>
+    <img src='<%= post['image'] %>'>
+  </div>
+<% end %>

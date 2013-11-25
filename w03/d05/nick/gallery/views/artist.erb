@@ -1,0 +1,12 @@
+<h2>Please add your artist</h2>
+
+<form method='post' action='<%= @artist.nil? ? "artist/create" : "/artists/#{@artist['id']}/update" %>'>
+
+  <label>Name:</label><input value='<%= @artist['name'] if @artist %>' type='text' name='name' autofocus>
+  <label>Location:</label><input value='<%= @artist['location'] if @artist %>' type='text' name='location' autofocus>
+  <label>Style:</label><input value='<%= @artist['style'] if @artist %>' type='text' name='style'>
+  <label>Profile Pic:</label><input value='<%= @artist ['profile_pic'] if @artist %>' type='text' name='profile_pic'>
+
+  <button><%= @artist.nil? ? "New Artist" : "Edit Artist"  %></button>
+
+</form>

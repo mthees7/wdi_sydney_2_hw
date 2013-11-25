@@ -1,0 +1,82 @@
+body {
+  font-size: 12px;
+  line-height: 17px;
+  font-family: "Times New Roman", serif;
+  color: #656565;
+  width: 960px;
+  margin: auto;
+}
+
+/*.container {
+  width: 960px;
+  margin: auto;
+}
+*/
+.logo {
+  padding-top: 35px;
+  padding-bottom: 20px;
+}
+
+a {
+  color: rgb(48,170,233);
+  text-decoration: none;
+}
+
+a:hover {
+color: #20222a;
+}
+
+h2 {
+  color: ;
+  word-spacing: 0.1em;
+  font: Times;
+  margin-top: 0.83em;
+}
+
+p {
+  font-size: 13px;
+  word-spacing: 0.1em;
+  line-height: 1.6em;
+  margin-top: 0;
+  color: #B1ABAB;
+  margin-bottom: 2em;
+}
+
+p2 {
+  color: rgb(48,170,233);
+}
+
+.boxes .newyork {
+  float: left;
+  margin-right: 8px;
+  padding: 1px;
+  border: 4px;
+  border-color: #B1ABAB;
+  border-style: solid;
+}
+
+.boxes .huffpo {
+  float: auto;
+  padding: 1px;
+  border: 4px;
+  border-color: #B1ABAB;
+  border-style: solid;
+}
+
+.boxes .lucky {
+  float: right;
+  margin-left: 8px;
+  padding: 1px;
+  border: 4px;
+  border-color: #B1ABAB;
+  border-style: solid;
+}
+
+.boxes .marieclaire {
+  float: right;
+  padding: 1px;
+  border: 4px;
+  border-color: #B1ABAB;
+  border-style: solid;
+}
+

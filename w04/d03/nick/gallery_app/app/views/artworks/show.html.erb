@@ -1,0 +1,7 @@
+<h2><%= @artwork.title %></h2>
+<p><%= @artwork.location %></p>
+<p><%= @artwork.info %></p>
+<%= image_tag @artwork.image %>
+
+<%= link_to 'Edit artwork', edit_artwork_path(@artwork) %>
+<%= button_to 'Delete artwork', @artwork, :method => 'delete' %>

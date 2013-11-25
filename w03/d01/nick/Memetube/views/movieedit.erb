@@ -1,0 +1,18 @@
+<h2>Enter your new movie details</h2>
+<form method="post" action="/movies/update">
+  <label for="title">Name:</label>
+  <input name="title" value="<%= @movie['title'] %>">
+
+  <label for="description">Description:</label>
+  <textarea name="description"><%= @movie['description'] %></textarea>
+
+  <label for="url">URL:</label>
+  <input name="url" value="<%= @movie['url'] %>">
+
+  <label for="genre">Genre:</label>
+  <textarea name="genre"><%= @movie['genre'] %></textarea>
+
+  <input type="hidden" name="id" value="<%= @movie['id'] %>">
+
+  <input type="submit" value="Update">
+</form>

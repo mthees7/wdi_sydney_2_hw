@@ -1,0 +1,5 @@
+Ocean.create(:name => 'Pacific', :area => 165200000, :mean_depth => 4280)
+Ocean.create(:name => 'Atlantic', :area => 106400000, :mean_depth => 3339)
+Ocean.create(:name => 'Southern', :area => 80200000, :mean_depth => 2891)
+Ocean.create(:name => 'Arctic', :area => 14056000, :mean_depth => 1038)
+Ocean.create(:name => 'Indian', :area => 73556000, :mean_depth => 3890)

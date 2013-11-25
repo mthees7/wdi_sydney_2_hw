@@ -1,0 +1,104 @@
+#container {
+     max-width: 940px;
+     margin: 0 auto;
+     position: relative;
+}
+
+body {
+     background-color: black;
+     font-family: Helvetica, sans-serif;
+     font-size: 13px;
+     line-height: 19px;
+     color: white;
+}
+
+h1.phark {
+     width: 538px;
+     margin-top: 20px;
+     height: 136px;
+     background: url('/memetube.png');
+     text-indent: -9999px;
+     margin: 0 auto;
+}
+
+nav {
+  text-align: center;
+  padding: 5px;
+  font-size: large;
+  background: white;
+  border-radius: 10px;
+  word-spacing: 20px;
+}
+
+nav ul {
+  padding: 0;
+}
+
+.preview {
+  display:block;
+  background-color: black;
+  text-align: center;
+  font-size: large;
+  padding: 0px;
+}
+
+.preview ul {
+  padding: none;
+  list-style: none;
+  padding: 0;
+}
+
+.preview li {
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.preview a {
+  background: white;
+}
+
+h2 {
+  padding: 20px;
+}
+
+a    {
+  color: rgb(240, 40, 7);
+  text-decoration: none;
+  font-weight: bolder;
+    }
+
+.detail ul {
+  text-decoration: none;
+  list-style: none;
+  font-size: large;
+  padding: 0;
+  color: rgb(240, 40, 7);
+}
+
+.detail p {
+  padding: 0;
+}
+
+.detail a {
+  background: white;
+}
+
+.upload {
+  text
+}
+
+* {
+     -moz-box-sizing: border-box; /* Firexfox */
+     -webkit-box-sizing: border-box; /* Safari/Chrome/iOS/Android */
+     box-sizing: border-box; /* IE */
+     text-align: center;
+}
+
+.clearfix:after {
+     content: ".";
+     display: block;
+     clear: both;
+     visibility: hidden;
+     line-height: 0;
+     height: 0;
+}
