@@ -1,0 +1,16 @@
+<h1> Artists </h1>
+
+  <div class="main">
+    <% @artists.each do |artist| %>
+      <h3> <%= artist.name %> </h3>
+      <img src="<%= artist.picture %>">
+      <h3> <%= artist.country %> </h3>
+    <%end%>
+  </div>
+
+  <div class="sidebar">
+    <ul>
+      <li><a href="/artists/new"></a></li>
+ <!-- <li><a href="/works/new"></a></li> -->
+    </ul>
+  </div>

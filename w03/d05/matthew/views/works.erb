@@ -1,0 +1,9 @@
+<h1> Works </h1>
+
+  <div class="main">
+    <% @works.each do |work| %>
+      <h3> <%= work.title %> </h3>
+      <img src="<%= work.image %>">
+      <h3> <%= work.year %> </h3>
+    <%end%>
+  </div>

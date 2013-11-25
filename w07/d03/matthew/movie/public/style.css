@@ -1,0 +1,63 @@
+h1 {
+  font-size: 30px;
+  max-width: 180px;
+  background-color: white;
+  opacity: 0.99;
+}
+
+h3 {
+  font-size: 16px;
+  max-width: 180px;
+  background-color: white;
+  opacity: 0.99;
+}
+
+.title {
+  font-size: 60px;
+  font-variant: small-caps;
+  max-width: 350px;
+  text-decoration: underline;
+}
+
+img {
+  background-size: 1000px;
+}
+
+div {
+  width:700px;
+  height:445px;
+  position:absolute;
+  opacity:;
+  filter:alpha(opacity=40);
+  /*background-color: grey;*/
+}
+
+p{
+
+  margin-left: +315px;
+  color: #2E2E2E;
+  background-color: white;
+  opacity: 0.90;
+  top: +200px;
+}
+
+.plot {
+  margin-left: +00px;
+  font-size: 24px;
+}
+
+.plot_div {
+  width: 600px;
+}
+
+.stars {
+  font-size: 26px;
+  font-weight: ;
+}
+
+footer {
+  color: white;
+  background-color: black;
+  opacity: 0.99
+}
+

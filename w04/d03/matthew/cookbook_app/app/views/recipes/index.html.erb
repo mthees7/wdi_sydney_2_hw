@@ -1,0 +1,11 @@
+<ol>
+  <% @recipes.each do |recipe|%>
+    <li>
+      <ul>
+        <li><%=link_to recipe.name, recipe_path(recipe.id)%></li>
+        <li><%=recipe.course%></li>
+        <li><%=image_tag recipe.image%></li>
+      </ul>
+    </li>
+  <%end%>
+</ol>
