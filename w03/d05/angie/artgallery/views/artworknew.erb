@@ -1,0 +1,13 @@
+<form method='post' action='/artworks<%= @artwork.nil? ? "/create" : "/artworks/#{@artwork.id}/update" %>'>
+
+    <label>Image URL:</label><input value='<%= @artwork['image'] if @artwork %>' type='text' name='image'>
+
+    <label>Title:</label><input value='<%= @artwork['title'] if @artwork %>' type='text' name='title' autofocus>
+
+    <label>style:</label><input value='<%= @artwork['style'] if @artwork %>' type='text' name='style'>
+
+    <label>year:</label><input value='<%= @artwork['year'] if @artwork %>' type='text' name='year'>
+
+    <button><%= @artwork.nil? ? "New Artwork" : "Edit Artwork"  %></button>
+
+  </form>

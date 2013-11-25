@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang='en'>
+<div class ="container">
+  <head>
+    <meta charset='utf-8'>
+    <title>blog vibes</title>
+    <link rel="stylesheet" href="/style.css">
+  </head>
+  <body>
+    <h1>My Blog</h1>
+    <nav>
+      <ul>
+        <li><a href='/'>Home</a></li>
+        <li><a href='/new'>New post</a></li>
+        <% @categories.each do |post| %>
+          <li><a href='/<%= post['category'] %>'><%= post['category'] %></a></li>
+        <% end %>
+     </ul>
+    </nav>
+
+    <%= yield %>
+  </body>
+</div>
+</html>

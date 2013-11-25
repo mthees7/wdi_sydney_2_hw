@@ -1,0 +1,15 @@
+<h2>Butterflies</h2>
+<form method="post" action="/butterflies/update">
+  <label for="name">Name:</label>
+  <input name="name" value="<%= @row['name'] %>">
+
+  <label for="family">Family:</label>
+  <textarea name="family"><%= @row['family'] %></textarea>
+
+  <label for="photo">Photo:</label>
+  <input name="photo" value="<%= @row['photo'] %>">
+
+  <input type="hidden" name="butterfly_id" value="<%= @row['butterfly_id'] %>">
+
+  <input type="submit" value="Update">
+</form>

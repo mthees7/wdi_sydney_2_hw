@@ -1,0 +1,14 @@
+<% @artists.each do |artist| %>
+    <section>
+      <div class='artist'>
+      <p class='name'><%= artist['name'] %></p>
+    </section>
+<% end %>
+
+<% @artworks.each do |artwork| %>
+    <section>
+      <div class='artwork'>
+      <img src="<%= artwork['image'] %>">
+      <p class='title'><%= artwork['title'] %></p>
+    </section>
+<% end %>
