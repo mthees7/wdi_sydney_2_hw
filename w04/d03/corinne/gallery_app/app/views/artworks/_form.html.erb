@@ -1,0 +1,26 @@
+<%= form_for @artwork do |f| %>
+  <p>
+    <%= f.label :title %>
+    <%= f.text_field :title, :autofocus => true %>
+  </p>
+  <p>
+    <%= f.label :year %>
+    <%= f.text_field :year %>
+  </p>
+  <p>
+    <%= f.label :photo %>
+    <%= f.text_field :photo %>
+  </p>
+
+  <p>
+    <%= f.label :artist_id %>
+    <select name="artwork[artist_id]">
+      <%= Artist.order(:name).each do |artist| %>
+        <option value=<%= artist.id if @artwork %> <%= 'selected' if artist.id == @artwork.artist_id %>><%= artist.name %></option>
+      <% end %>
+    </select>
+  </p>
+
+  <%= f.submit %>
+
+<% end %>

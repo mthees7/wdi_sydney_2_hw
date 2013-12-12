@@ -1,0 +1,17 @@
+<h2>Please add your comment</h2>
+
+<form method='post' action='/<%= @post.id %>/comment/create'>
+
+  <label>Name:</label><input value='<%= %>' type='text' name='author' autofocus>
+  <label>Comment Title:</label><input value='<%=  %>' type='text' name='comment_title'>
+  <label>Comment:</label><textarea value='<%=   %>' type='text' name='comment_body' rows="10" cols="92"></textarea>
+
+  <button><%= "Add Your Comment" %></button>
+
+</form>
+
+
+
+value = "<%= @comment.nil? ? " " : @comment.body %>"
+
+action='<%= @post.nil? ? "/create" : "/#{@post['id']}/update" %>'>

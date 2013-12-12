@@ -1,0 +1,13 @@
+<h1><%= @artwork.title %></h1>
+<!-- <h2>< %= @artwork.artist.name %></h2>
+ --><p><%= @artwork.year %></p>
+
+<%= link_to 'Edit Artwork', edit_artwork_path %>
+<%= button_to 'Delete Artwork', artwork_path, :method => 'delete' %>
+<br>
+
+<%= image_tag @artwork.photo %>
+
+
+
+

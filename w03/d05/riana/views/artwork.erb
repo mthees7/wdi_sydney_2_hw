@@ -1,0 +1,22 @@
+<form method="POST" action='<%= @artwork.nil? ? "/artwork/new" : "/artwork/#{@artwork.id}" %>'>
+  <p>Add New GA Gallery Artwork</p>
+  <label for="name">Artwork title</label>
+  <input name="name" placeholder="name" value="<%= @artwork.name if @artwork %>">
+  <label for="artist_name">The Artist</label>
+  <select name="artist_id">
+    <option></option>
+    <% @all_artists.each do |artist| %>
+      <option value="<%= artist.id%>"><%= artist.name %></option>
+    <% end %>
+  </select>
+  <input class="button" type="submit" value="Save">
+</form>
+
+<section>
+  <h2>GA Gallery Artworks</h2>
+  <% if !@all_artworks.nil? %>
+    <% @all_artworks.each do |an_artwork| %>
+      <p><%= an_artwork.name %> <%= an_artwork.artist.name if an_artwork.artist %></p>
+    <% end %>
+  <% end %>
+</section>

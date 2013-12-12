@@ -1,0 +1,7 @@
+<h2><%= @ocean.name %></h2>
+Average Depth: <%= @ocean.avg_depth %>
+
+<%= link_to 'Edit Ocean', ocean_edit_path(@ocean.id) %>
+<%= button_to 'Destroy Ocean', ocean_delete_path(@ocean.id) %>
+
+

@@ -1,0 +1,27 @@
+<script src="js/movies.js"></script>
+
+
+<div id="controls">
+
+  <form action="/movie" method="get">
+  <input id="movie_name" placeholder="Enter Movie Name">
+  <input type="text" id="movie_link" value="Get the info...">
+  </form>
+
+</div>
+
+<!-- underscore -->
+
+<div id="movie"></div>
+
+<script type="text/underscore-template" id="movie_template">
+
+<h1>{{= Title }}</h2>
+<h3>{{= Plot }}</h3>
+<p>{{= Title }} was released in {{= Year }}</p>
+<p>Dir: {{= Director }}</p>
+<p>Writer(s): {{= Writer }}</p>
+<p>Starring: {{= Actors }}</p>
+<img src={{= Poster }}>
+
+</script>

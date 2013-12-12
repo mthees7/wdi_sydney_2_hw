@@ -1,0 +1,15 @@
+<div class ="form">
+
+<form method='post' action='<%= @post.nil? ? "/create" : "/#{@post['id']}/update" %>'>
+
+  <label>Title:</label><input value='<%= @post['title'] if @post %>' type='text' name='title' autofocus>
+
+ <img> <label>Image URL:</label><input value='<%= @post['image'] if @post %>' type='text' name='image'> </img>
+
+  <label>Post:</label><input value='<%= @post['body'] if @post %>' type='text' name='body'>
+  <label>Category:</label><input value='<%= @post['category'] if @post %>' type='text' name='category'>
+
+  <button><%= @post.nil? ? "New Post" : "Edit Post"  %></button>
+
+</form>
+</div>

@@ -1,0 +1,11 @@
+<ol>
+  <% @artists.each do |artist| %>
+  <li>
+    <ul>
+      <li><%= link_to artist.name, artist_path(artist) %></li>
+      <li><%= artist.hometown %></li>
+      <li><%= image_tag artist.profile_pic %></li>
+    </ul>
+  </li>
+<% end %>
+</ol>

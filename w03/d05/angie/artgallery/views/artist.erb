@@ -1,0 +1,16 @@
+  <img src="http://www.saatchigallery.com/images/paperhome/1.jpg">
+
+  <% @artists.each do |artist| %>
+    <section>
+      <div class='artist'>
+      <p class='name'><%= artist['name'] %></p>
+      <p class='dob'><%= artist['dob'] %></p>
+      <p class='nationality'><%= artist['nationality'] %></p>
+
+
+      <a href='/artists/<%= artist['id'] %>/edit/'>Edit</a>
+      <a href='/artists/<%= artist['id'] %>/artists/new'>Add Artist</a>
+      <form action='/artists/<%= artist['id'] %>/delete' method='post'>
+        <button class='button_delete'>Delete</button>
+      </form>
+<%end%>

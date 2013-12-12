@@ -1,0 +1,22 @@
+body {
+  font-family: Rockwell;
+  font-size: larger;
+  text-align: center;
+  padding-left: none;
+}
+
+ul {
+  display: inline;
+  text-decoration: none;
+  list-style: none;
+  padding-left: none;
+}
+
+input {
+  width: 400px;
+  display: inline-block;
+}
+
+.submit {
+  width: 200px;
+}

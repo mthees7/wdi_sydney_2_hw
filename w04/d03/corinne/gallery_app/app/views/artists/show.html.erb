@@ -1,0 +1,14 @@
+<h1><%= @artist.name %> </h1>
+<ul>
+  <li><%= @artist.dob %> </li>
+  <li><%= @artist.nationality %> </li>
+</ul>
+
+<%= link_to 'Edit Artist', edit_artist_path %>
+<%= button_to 'Delete Artist', artist_path, :method => 'delete' %>
+
+<% @artist.artworks.each do |artwork| %>
+  <h2><%= artwork.title %> </h2>
+  <p><%= artwork.year %> </p>
+  <%= image_tag artwork.photo %>
+<% end %>

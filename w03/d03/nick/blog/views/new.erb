@@ -1,0 +1,32 @@
+<h2>Enter a new post</h2>
+
+<form method='post' action='<%= @post.nil? ? "/create" : "/#{@post['id']}/update" %>'>
+  <fieldset>
+    <legend>
+      Enter Post Details
+    </legend>
+    <label>
+    <input value='<%= @post['title'] if @post %>' type='text' name='title' size="30" maxlength="100" placeholder="Title:">
+    </label>
+    <br />
+    <label>
+    <input value='<%= @post ['category'] if @post %>' type='text' name='category' size="30" maxlength="100" placeholder="Category:">
+    </label>
+    <br />
+    <label>
+      <input value='<%= @post['image'] if @post %>' type='text' name='image' size="30" maxlength="100" placeholder="Image URL:">
+    </label>
+    <br />
+  </fieldset>
+  <br />
+  <fieldset>
+    <legend>
+      Enter Content
+    </legend>
+    <textarea value='<%= @post['body'] if @post %>' type='text' name='body' rows="10" cols="92" id="comments">
+    </textarea>
+  </fieldset>
+  <br />
+  <button><%= @post.nil? ? "Submit" : "Edit Post"  %></button>
+
+</form>

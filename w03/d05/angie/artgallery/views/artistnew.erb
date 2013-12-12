@@ -1,0 +1,11 @@
+<form method='post' action='/artists<%= @artist.nil? ? "/create" : "/artists/#{@artist.id}/update" %>'>
+
+    <label>Name:</label><input value='<%= @artist['name'] if @artist %>' type='text' name='name' autofocus>
+
+    <label>Date of birth:</label><input value='<%= @artist['dob'] if @artist %>' type='date' name='dob'>
+
+    <label>Nationality:</label><input value='<%= @artist['nationality'] if @artist %>' type='text' name='nationality'>
+
+    <button><%= @artist.nil? ? "New Artist" : "Edit Artist"  %></button>
+
+  </form>

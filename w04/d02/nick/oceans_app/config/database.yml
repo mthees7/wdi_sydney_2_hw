@@ -1,0 +1,8 @@
+development:
+  adapter: postgresql
+  encoding: unicode
+  host: localhost
+  database: oceans_app_development
+  pool: 5
+  username: nickdoherty
+  password:

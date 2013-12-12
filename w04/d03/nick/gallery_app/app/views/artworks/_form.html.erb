@@ -1,0 +1,31 @@
+<%= form_for @artwork do |f| %>
+<p>
+  <%= f.label :title %>
+  <%= f.text_field :title %>
+</p>
+<p>
+  <%= f.label :location %>
+  <%= f.text_field :location %>
+</p>
+<p>
+  <%= f.label :info %>
+  <%= f.text_field :info %>
+</p>
+<p>
+  <%= f.label :image %>
+  <%= f.text_field :image %>
+</p>
+
+
+<p>
+    <%= f.label :artist_id %>
+    <select name="artwork[artist_id]">
+    <% Artist.order(:name).each do |artist| %>
+    <option value=<%= artist.id%> <%= 'selected' if artist.id == @artwork.artist_id %>><%=artist.name %></option>
+      <% end %>
+  </p>
+
+  <%= f.submit %>
+<% end %>
+
+

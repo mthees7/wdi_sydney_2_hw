@@ -1,0 +1,60 @@
+/*
+Keep track of which books you read and which books you want to read!
+
+Create a webpage with an h1 of "My Book List".
+Add a script tag to the bottom of the page, where all your JS will go.
+Copy the array of books from the previous exercise.
+Iterate through the array of books. For each book, create a p element with the book title and author and append it to the page.
+Bonus: Use a ul and li to display the books.
+Bonus: add a property to each book with the URL of the book cover, and add an img element for each book on the page.
+Bonus: Change the style of the book depending on whether you have read it or not.
+*/
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Book List</title>
+  </head>
+  <body>
+      <h1>My Book List</h1>
+      <script>
+        var readingList = function(title, author, cover, alreadyRead){
+          return{
+            title: title,
+            author: author,
+            cover: cover,
+            alreadyRead: alreadyRead,
+            summary: function(){
+              return '"' + this.title + '"' + " by " + this.author;
+            }
+          }
+        };
+        var books = [
+          book1 = readingList("The History of Almost Everything", "Bill Bryson", "http://upload.wikimedia.org/wikipedia/en/e/ed/Bill_bryson_a_short_history.jpg",true),
+          book2 = readingList("Travelling Without Moving","Alain De Button", "http://4.bp.blogspot.com/-ckpOfV7HOZI/UYs2Q1HzGQI/AAAAAAAAMKU/_AoQN3LGwL0/s400/alain-de-botton-the-art-of-travel-2.jpg",true),
+          book3 = readingList("A Brief Histor of Time","Stephen Hawking", "http://static.guim.co.uk/books/data/covers/97805/93/06/0506.jpg",true),
+          book4 = readingList("Catcher in the Rye","J.D. Salinger", "http://blog.cksf.org/assets/content/rye_catcher.jpg",false),
+          book5 = readingList("The Design of Everyday Things","Don Norman", "http://dietrovetro.com/wp-content/book-design-of-everyday-things.jpg",false)
+        ];
+
+        var pageNode = document.getElementsByTagName('body')[0];
+        var newList = document.createElement('ul');
+
+        for(var i = 0; i < books.length; i++){
+          books[i]
+          var newListItem = document.createElement('li');
+          var newImage = document.createElement('img');
+          var textNode = document.createTextNode(books[i].title + " by " + books[i].author);
+          newListItem.appendChild(textNode);
+          newImage.src = books[i].cover;
+          newListItem.appendChild(newImage);
+          if(books[i].alreadyRead === false){
+            newListItem.style.color = "red";
+          }
+          newList.appendChild(newListItem);
+        }
+        pageNode.appendChild(newList);
+      </script>
+  </body>
+</html>

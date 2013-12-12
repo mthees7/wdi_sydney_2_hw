@@ -1,0 +1,26 @@
+<%= form_for @ingredient do |f| %>
+  <p>
+    <%= f.label :name %>
+    <%= f.text_field :name %>
+  </p>
+  <p>
+    <%= f.label :measurement %>
+    <%= f.text_field :measurement %>
+  </p>
+    <p>
+    <%= f.label :cost %>
+    <%= f.text_field :cost %>
+  </p>
+  <p>
+    <%= f.label :image %>
+    <%= f.text_field :image %>
+  </p>
+
+  <% Ingredient.order(:name).each do |ingredient| %>
+  <p>
+  <%= ingredient.name %>
+  <% end %>
+  </p>
+
+  <%= f.submit %>
+<% end %>

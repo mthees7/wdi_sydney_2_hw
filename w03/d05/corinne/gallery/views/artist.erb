@@ -1,0 +1,35 @@
+<% @artists.each do |artist| %>
+  <section>
+    <div class='artist'>
+
+      <article>
+        <p><%= artist.artist_name %></p>
+        <p><%= artist.dob %></p>
+        <p><%= artist.nationality %></p>
+
+
+
+
+        <% artist.artworks.each do |artwork| %>
+          <p><%= artwork.artwork_title %><p>
+        <% end %>
+
+
+
+
+
+      </article>
+
+      <div class='link'><a href='/artists/<%= artist['id'] %>/edit'>Edit</a></div>
+      <form action='/artists/<%= artist['id'] %>/delete' method='post'>
+        <button class='button_delete'>Delete</button>
+      </form>
+
+    </div>
+
+    <div class='link'>
+      <p><a href="/artworks/new">Add Artwork</a></p>
+    </div>
+
+  </section>
+<% end %>

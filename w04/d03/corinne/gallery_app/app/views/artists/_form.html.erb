@@ -1,0 +1,17 @@
+<%= form_for @artist do |f| %>
+  <p>
+    <%= f.label :name %>
+    <%= f.text_field :name, :autofocus => true %>
+  </p>
+  <p>
+    <%= f.label :dob %>
+    <%= f.text_field :dob %>
+  </p>
+  <p>
+    <%= f.label :nationality %>
+    <%= f.text_field :nationality %>
+  </p>
+  <%= f.submit %>
+<% end %>
+
+

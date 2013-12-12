@@ -1,0 +1,41 @@
+body {
+  font-family: Calibri;
+}
+
+#container {
+  max-width: 960px;
+  margin: auto;
+  background-color: #678;
+  color: white;
+  border-radius: 0.5em;
+  padding: 1em;
+}
+
+h1 {
+  color: #999;
+  font-size: 400%;
+  text-shadow: 0 0 20px black;
+  font-family: Arial;
+  text-align: center;
+}
+
+#movie_link {
+  font-size: 140%;
+  padding: 0.5em 1em;
+  text-align: center;
+  margin: 0 auto;
+  border-radius: 0.7em;
+}
+
+#movie_name {
+  width: 99%;
+  font-size: 200%;
+  margin: 1em 0;
+  border-radius: 0.2em;
+  padding: 0.5em 0;
+  text-align: center;
+}
+
+#movie {
+  text-align: center;
+}

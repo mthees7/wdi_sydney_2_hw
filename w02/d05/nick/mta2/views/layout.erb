@@ -1,0 +1,43 @@
+<!doctype html>
+
+<html lang="en">
+  <head>
+    <title>MTA Journey Planner</title>
+    <link rel="stylesheet" href="/style.css">
+    <link rel="stylesheet" href="css/normalize.css">
+  </head>
+
+  <body>
+
+    <div id="container">
+
+      <header>
+        <h1 class="phark">>MTA</h1>
+      </header>
+
+      <article>
+
+        <div class="lines">
+
+          <img src="/nline.png">
+
+          <img src="/lline.png">
+
+          <img src="/sixline.png">
+        </div>
+
+        <div class="main">
+
+          <p>Plan your journey on the <b>N Line</b>, <b>L Line</b> or <b>6th Line</b>. Enter your route below.</p>
+
+          <%= yield %>
+        </div>
+      </article>
+    <div>
+  </body>
+
+<!--   <footer>
+    <p>
+      <%= Time.new.to_s %>
+  </footer> -->
+</html>

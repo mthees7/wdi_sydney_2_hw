@@ -1,0 +1,27 @@
+# Sample localization file for English. Add more files in this directory for other locales.
+# See https://github.com/svenfuchs/rails-i18n/tree/master/rails%2Flocale for starting points.
+
+en:
+  hello: "Hello world"
+  distance:
+    centi:
+      one: "centimeter"
+      other: "centimeters"
+    unit:
+      one: "meter"
+      other: "meters"
+    thousand:
+      one: "kilometer"
+      other: "kilometers"
+    billion: "gazillion-distance"
+  area:
+    centi:
+      one: "square centimeter"
+      other: "square centimeters"
+    unit:
+      one: "square meter"
+      other: "square meters"
+    thousand:
+      one: "square kilometer"
+      other: "square kilometers"
+    billion: "square gazillion-distance"

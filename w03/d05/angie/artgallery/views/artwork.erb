@@ -1,0 +1,14 @@
+ <% @artworks.each do |artwork| %>
+    <section>
+      <div class='artwork'>
+       <img src="<%= artwork['image'] %>">
+        <p class='title'><%= artwork['title'] %></p>
+        <p class='year'><%= artwork['year'] %></p>
+        <p class='style'><%= artwork['style'] %></p>
+
+      <a href='/artworks/<%= artwork['id'] %>/edit/'>Edit</a>
+      <a href='/artworks/<%= artwork['id'] %>/artwork/new'>Add Artist</a>
+      <form action='/artworks/<%= artwork['id'] %>/delete' method='post'>
+        <button class='button_delete'>Delete</button>
+      </form>
+<%end%>

@@ -1,0 +1,5 @@
+<% @artist.each do |artist| %>
+  <p><%= artist['name'] %></p>
+  <p><%= artist['location'] %></p>
+  <img src='<%= artist['profile_pic'] %>'>
+<% end %>

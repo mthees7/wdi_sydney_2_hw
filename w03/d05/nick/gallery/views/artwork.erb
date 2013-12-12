@@ -1,0 +1,15 @@
+<h2>Please add your artwork</h2>
+
+<form method='post' action='<%= @artwork.nil? ? "artwork/create" : "/artworks/#{@artwork['id']}/update" %>'>
+
+  <label>Title:</label><input value='<%= @artwork['title'] if @artwork %>' type='text' name='title' autofocus>
+  <label>Info:</label><input value='<%= @artwork['info'] if @artwork %>' type='text' name='info' autofocus>
+  <label>Image:</label><input value='<%= @artwork ['image'] if @artwork %>' type='text' name='image'>
+  <label>Which artist created this?</label>
+  <select>
+    <%= erb :artist_menu %>
+  </select>
+
+  <button><%= @artwork.nil? ? "New Artwork" : "Edit Artwork"  %></button>
+</form>
+

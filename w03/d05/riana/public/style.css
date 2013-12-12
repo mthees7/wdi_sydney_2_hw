@@ -1,0 +1,134 @@
+html{
+  height: 100%;
+}
+.button{
+    position: relative;
+    overflow: visible;
+    display: inline-block;
+    padding: 0.5em 1em;
+    border: 1px solid #d4d4d4;
+    margin: 0;
+    text-decoration: none;
+    text-align: center;
+    text-shadow: 1px 1px 0 #fff;
+    font:11px/normal sans-serif;
+    color: #333;
+    white-space: nowrap;
+    cursor: pointer;
+    outline: none;
+    background-color: #ececec;
+    background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#f4f4f4), to(#ececec));
+    background-image: -moz-linear-gradient(#f4f4f4, #ececec);
+    background-image: -ms-linear-gradient(#f4f4f4, #ececec);
+    background-image: -o-linear-gradient(#f4f4f4, #ececec);
+    background-image: linear-gradient(#f4f4f4, #ececec);
+    -moz-background-clip: padding; /* for Firefox 3.6 */
+    background-clip: padding-box;
+    border-radius: 0.2em;
+    /* IE hacks */
+    zoom: 1;
+    *display: inline;
+}
+.button:hover,
+.button:focus,
+.button:active,
+.button.active {
+    border-color: #3072b3;
+    border-bottom-color: #2a65a0;
+    text-decoration: none;
+    text-shadow: -1px -1px 0 rgba(0,0,0,0.3);
+    color: #fff;
+    background-color: #3c8dde;
+    background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#599bdc), to(#3072b3));
+    background-image: -moz-linear-gradient(#599bdc, #3072b3);
+    background-image: -o-linear-gradient(#599bdc, #3072b3);
+    background-image: linear-gradient(#599bdc, #3072b3);
+}
+
+body{
+  width: 940px;
+  height: 100%;
+  margin: 0 auto;
+  font-family: 'Questrial', sans-serif;
+  font-size: 1em;
+  background-color: rgba(113,165,144,0.5);
+}
+header{
+  padding: 10px;
+}
+h1, h2 {
+  display: inline;
+  line-height: 2.5em;
+  font-family: 'Cinzel Decorative', cursive;
+  padding: 0;
+  margin: 0 20%;
+}
+nav{
+  display: inline;
+  padding: 10px;
+  width: 40%;
+}
+nav ul{
+  position: relative;
+  display: inline;
+  padding: 0;
+  margin: 0;
+  top: -5px;
+}
+nav ul li{
+  display: inline;
+  list-style: none;
+}
+.home_img{
+  position: relative;
+  width: 100%;
+  padding: 10px 0;
+  margin: 10px 0 10px -200px;
+  box-shadow: inset 0 0 1em #E2FFF3;
+}
+.artist_main{
+  display: inline-block;
+  width: 50%;
+  border-right: 1px solid rgba(226,255,243,0.5);
+}
+.artist_main p{
+  display: inline-block;
+  padding: 0;
+  margin: 5px;
+  width: 100%;
+}
+.artist_main h2{
+  padding: 0;
+  margin: 0 10%;
+}
+
+.label{
+
+}
+.mod_artworks{
+
+}
+.mod_artists{
+
+}
+.artwork_main{
+  display: inline-block;
+  position: relative;
+  width: 50%;
+  float: right;
+}
+.artwork_main h2{
+  padding:0;
+  margin: 0 10%;
+}
+.artwork_main p{
+  display: inline-block;
+  padding: 0;
+  margin: 5px;
+  width: 100%;
+}
+.container{
+  position: relative;
+  padding-bottom: 20px;
+  margin-bottom: 20px;
+}

@@ -1,0 +1,180 @@
+/*Generic layout*/
+.button {
+  position: relative;
+  overflow: visible;
+  display: inline-block;
+  padding: 0.5em 1em;
+  border: 1px solid #d4d4d4;
+  margin: 0;
+  text-decoration: none;
+  text-align: center;
+  text-shadow: 1px 1px 0 #fff;
+  font:11px/normal sans-serif;
+  color: #333;
+  white-space: nowrap;
+  cursor: pointer;
+  outline: none;
+  background-color: #ececec;
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#f4f4f4), to(#ececec));
+  background-image: -moz-linear-gradient(#f4f4f4, #ececec);
+  background-image: -ms-linear-gradient(#f4f4f4, #ececec);
+  background-image: -o-linear-gradient(#f4f4f4, #ececec);
+  background-image: linear-gradient(#f4f4f4, #ececec);
+  -moz-background-clip: padding; /* for Firefox 3.6 */
+  background-clip: padding-box;
+  border-radius: 0.2em;
+  /* IE hacks */
+  zoom: 1;
+  *display: inline;
+}
+html{
+  height: 100%;
+}
+body{
+  background: -webkit-linear-gradient(left, #2F2727, #1a82f7, #2F2727, #1a82f7, #2F2727);  width: 960px;
+  margin: auto;
+  font-family: Helvetica;
+  color: white;
+  line-height: 1.5em;
+  height: 100%;
+}
+h1, h2{
+  font-family: 'Codystar', cursive;
+  font-size: 2em;
+  padding: 20px;
+  margin: 20px;
+}
+h1{
+  text-align: center;
+  font-size: 3em;
+}
+a:visited {
+  color: inherit;
+}
+
+/*Menu*/
+nav{
+  margin-left: 80%;
+}
+nav ul{
+  list-style: none;
+}
+nav ul li{
+  display: inline;
+  margin: 0;
+}
+nav a{
+  text-decoration: none;
+  color: white;
+}
+.videoList{
+  padding: 20px;
+  margin-bottom: 20px;
+}
+/*List of available videos on the landing page*/
+.videoIndex ul{
+  border: 1px dotted white;
+  padding: 20px 0 20px 30px;
+  margin: 20px;
+  list-style: none;
+}
+.videoIndex a{
+  display: inline;
+  color: white;
+  text-decoration: none;
+  line-height: 1.5em;
+}
+
+/*Viewing of individual videos*/
+.videoView ul{
+  list-style: none;
+  color: white;
+  font-size: 1em;
+  line-height: 1.5em;
+}
+.videoView li{
+  padding: 5px;
+}
+.videoView a{
+  color: #333;
+  text-decoration: none;
+}
+#delete{
+  display: inline;
+  margin-left: 60%;
+}
+#delete{
+  display: inline;
+  margin-left: 70%;
+  float: left;
+}
+
+/*Add new video*/
+form{
+  padding: 20px;
+  margin-bottom: 20px;
+  border: 1px dotted white;
+}
+div{
+  padding: 10px;
+  margin: 0 10px;
+  font-size: 1em;
+}
+label{
+  float: left;
+  text-align: right;
+  margin-right: 15px;
+  width: 100px;
+  padding-top: 5px;
+}
+input{
+  padding: 5px;
+  font-family: Helvetica, sans-serif;
+
+}
+.createVideo{
+  display: inline;
+  margin-left: 80%;
+}
+.updateVideo{
+  display: inline;
+  margin-left: 80%;
+}
+
+/*Genre filtering stylesheet*/
+.filter {
+
+  padding: 40px;
+  margin-bottom: 20px;
+}
+
+br {
+  clear: all;
+}
+
+.filter ul {
+  display: inline;
+  list-style: none;
+}
+
+.filter a {
+  color: #fff;
+  margin: 0;
+  padding: 3px 10px;
+  background-color: #0187c5;
+  border-radius: 3px;
+  text-decoration: none;
+  text-transform: lowercase;
+  line-height: 24px;
+  font-size: 12px;
+  box-shadow: rgba(0, 0, 0, 0.2) 0 -1px 0 inset,
+    rgba(0, 0, 0, 0.1) 0 1px 4px;
+  text-shadow: 0 -1px 1px rgba(0,0,0,0.3);
+  display: inline;
+  float: left;
+}
+
+.filter a:hover {
+  background-color: #bada55;
+  text-transform: uppercase;
+}

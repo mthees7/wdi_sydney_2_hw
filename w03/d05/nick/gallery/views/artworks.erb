@@ -1,0 +1,11 @@
+<% @artworks.each do |artwork| %>
+  <section>
+
+    <h2 class="focus"><a href="/artworks/<%= artwork['id'] %>"><%= artwork['name'] %></a></h2>
+    <%= artwork['title'] %>
+
+    <img src='<%= artwork['image'] %>'>
+
+
+  </section>
+<% end %>

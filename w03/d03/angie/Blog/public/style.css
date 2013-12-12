@@ -1,0 +1,174 @@
+html {
+  backbackground: url(http://fin6.com/wp-content/uploads/2013/09/b2ece014989f0d37fcb2f0e5f3880cbf.jpg) no-repeat center center fixed;
+}
+
+/*-----------------------------------------------------------------------------
+=01 BODY
+-----------------------------------------------------------------------------*/
+
+body {
+  margin: 0px;
+  padding: 0px;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #7f7d78;
+  font-size: 13px;
+  line-height: 1.1;
+  background-image: url('http://fin6.com/wp-content/uploads/2013/09/b2ece014989f0d37fcb2f0e5f3880cbf.jpg')
+
+}
+
+h1 {
+  margin-left: 50%;
+  font-size: 36px;
+  font-family: Helvetica, Arial, Sans-serif;
+  color: #84ccc7;
+  line-height: 1.1;
+
+}
+
+
+form ul li {
+text-decoration: none;
+}
+
+div form {
+  color: #84ccc7;
+}
+/*-----------------------------------------------------------------------------
+=02 HEADERS
+-----------------------------------------------------------------------------*/
+
+
+#header {
+  padding: 20px 0px;
+}
+/*
+
+  #logo {
+    background: url(../images/logo.png) no-repeat;
+    width: 275px;
+    height: 76px;
+  }
+
+    #logo h1 {
+      text-indent: -99999em;  /* hides the H1 tag from the page, while semantically keeping it present in your HTML */
+    }*/
+
+/*-----------------------------------------------------------------------------
+=03 GLOBAL STYLES
+-----------------------------------------------------------------------------*/
+
+
+
+
+a {
+  color:#26689f;
+  text-decoration:none;
+}
+
+p { margin: 0px 0px 15px 0px; } /* there's no explicit rule, but putting about 15px margin only to the bottom of your p is generally a good rule of thumb */
+
+label {
+  float: right;
+}
+
+.button {
+  -moz-box-shadow:inset 0px 1px 0px 0px #cae3fc;
+  -webkit-box-shadow:inset 0px 1px 0px 0px #cae3fc;
+  box-shadow:inset 0px 1px 0px 0px #cae3fc;
+  background-color:transparent;
+  -webkit-border-top-left-radius:37px;
+  -moz-border-radius-topleft:37px;
+  border-top-left-radius:37px;
+  -webkit-border-top-right-radius:0px;
+  -moz-border-radius-topright:0px;
+  border-top-right-radius:0px;
+  -webkit-border-bottom-right-radius:37px;
+  -moz-border-radius-bottomright:37px;
+  border-bottom-right-radius:37px;
+  -webkit-border-bottom-left-radius:0px;
+  -moz-border-radius-bottomleft:0px;
+  border-bottom-left-radius:0px;
+  text-indent:0;
+  border:1px solid #469df5;
+  display:inline-block;
+  color:#ffffff;
+  font-family:Arial;
+  font-size:15px;
+  font-weight:bold;
+  font-style:normal;
+  height:65px;
+  line-height:65px;
+  width:131px;
+  text-decoration:none;
+  text-align:center;
+  text-shadow:-1px 2px 19px #287ace;
+}.button:active {
+  position:relative;
+  top:1px;
+}</style>
+
+ body img {
+
+  margin-left: 50%;
+}
+
+/*-----------------------------------------------------------------------------
+=04 NAV
+-----------------------------------------------------------------------------*/
+
+nav {
+  width: 100%;
+  border-top: dashed #999 1px;
+  border-bottom: dashed #999 1px;
+  display: block;
+  padding: 10px;
+  text-decoration: none;
+}
+
+
+  nav ul li {
+    display: inline;
+    margin-right: 20px;
+    text-decoration: none;
+    color: #84ccc7;
+  }
+
+
+  nav li a {
+    display: inline;
+    width: 100px;
+    padding: 10px 0px;
+    color: #84ccc7;
+    text-decoration: none;
+
+  }
+
+
+
+
+
+
+/*-----------------------------------------------------------------------------
+=06 MISC
+-----------------------------------------------------------------------------*/
+
+/*
+.clear {
+  clear: both;
+}
+
+.imgright {
+  float: right;
+  margin: 0 0 10px 10px;
+}
+
+.imgleft {
+  float: left;
+  margin: 0 10px 10px 0;
+}
+
+.imgborder {
+  border: 5px solid #CCC;
+}
+*/
